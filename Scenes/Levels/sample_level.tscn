@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5xkdo13aol70"]
+
+[ext_resource type="Texture2D" uid="uid://clbm5ivx6cr2o" path="res://icon.svg" id="1_i2phc"]
+[ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="2_rbjd4"]
+
+[node name="Sample_Level" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(574, 387)
+scale = Vector2(6.25, 4.03906)
+texture = ExtResource("1_i2phc")
+
+[node name="Candle-Player" parent="." instance=ExtResource("2_rbjd4")]
+position = Vector2(536, 275)

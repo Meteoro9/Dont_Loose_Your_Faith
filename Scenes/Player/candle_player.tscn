@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsnr7dq55rfyk"]
+
+[ext_resource type="Script" uid="uid://dlivlqrme6awg" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
+[ext_resource type="Texture2D" uid="uid://c55m8lp0o8ega" path="res://Assets/Player/vela1 redimencionada.png" id="1_yngwo"]
+[ext_resource type="Script" uid="uid://1ajmaisv5g72" path="res://Scripts/Player/jump_area.gd" id="3_85dko"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1jqv"]
+size = Vector2(20, 3)
+
+[node name="Candle-Player" type="CharacterBody2D"]
+script = ExtResource("1_p1jqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_yngwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_p1jqv")
+
+[node name="Jump-Area" type="Area2D" parent="."]
+script = ExtResource("3_85dko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jump-Area"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_p1jqv")
+debug_color = Color(0.614125, 0.531184, 0.228713, 0.42)
+
+[connection signal="body_entered" from="Jump-Area" to="Jump-Area" method="_on_body_entered"]
+[connection signal="body_exited" from="Jump-Area" to="Jump-Area" method="_on_body_exited"]
