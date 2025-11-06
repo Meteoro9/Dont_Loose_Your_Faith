@@ -1,7 +1,7 @@
 extends Camera2D
 class_name CameraFollow
 
-@export var player : CharacterBody2D
+@export var player : Node2D
 var follow_speed := 6.0
 
 func _ready() -> void:

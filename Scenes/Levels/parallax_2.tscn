@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://co3o3n7v2njpx"]
+
+[ext_resource type="Texture2D" uid="uid://bt256d55d1ud3" path="res://Assets/Tierra.png" id="1_mvnrn"]
+
+[node name="Parallax2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0.5)
+motion_mirroring = Vector2(0, 743.98)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-25, -97)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_mvnrn")
+centered = false

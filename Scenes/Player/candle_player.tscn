@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dsnr7dq55rfyk"]
+[gd_scene load_steps=29 format=3 uid="uid://dsnr7dq55rfyk"]
 
 [ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
 [ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
@@ -120,7 +120,6 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="Animation" id="Animation_c5p07"]
 resource_name = "Fire"
-length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -129,10 +128,10 @@ tracks/0/path = NodePath("DarknessTexture:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.466667),
+"times": PackedFloat32Array(0, 0.2, 0.733333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(4.285, 4.285), Vector2(4.48, 4.48), Vector2(4.025, 4.025)]
+"values": [Vector2(1.51, 1.51), Vector2(1.65, 1.65), Vector2(1.63, 1.63)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -141,10 +140,10 @@ tracks/1/path = NodePath("DarknessTexture:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -25)]
+"values": [Vector2(0, 0), Vector2(0, -10)]
 }
 
 [sub_resource type="Animation" id="Animation_ebalj"]
@@ -174,10 +173,44 @@ tracks/1/keys = {
 "values": [Vector2(-84, 336)]
 }
 
+[sub_resource type="Animation" id="Animation_k754a"]
+resource_name = "kill"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarknessTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.51, 1.51), Vector2(0.22, 0.22), Vector2(0.175, 0.175)]
+}
+
+[sub_resource type="Animation" id="Animation_fldxn"]
+resource_name = "stay_killed"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarknessTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.175, 0.175)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bcdl3"]
 _data = {
 &"Fire": SubResource("Animation_c5p07"),
-&"RESET": SubResource("Animation_ebalj")
+&"RESET": SubResource("Animation_ebalj"),
+&"kill": SubResource("Animation_k754a"),
+&"stay_killed": SubResource("Animation_fldxn")
 }
 
 [node name="Candle-Player" type="CharacterBody2D" node_paths=PackedStringArray("fire_animation")]
@@ -202,11 +235,12 @@ position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_p1jqv")
 debug_color = Color(0.614125, 0.531184, 0.228713, 0.42)
 
-[node name="FireArea" type="Area2D" parent="." node_paths=PackedStringArray("bar")]
+[node name="FireArea" type="Area2D" parent="." node_paths=PackedStringArray("bar", "fire_animation")]
 position = Vector2(0, -22)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("6_fldxn")
 bar = NodePath("../CanvasLayer/ProgressBar")
+fire_animation = NodePath("../FireAnimation")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea"]
 position = Vector2(0, 2.89425)
@@ -220,7 +254,7 @@ scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_usdh6")
 animation = &"Fire"
 autoplay = "Fire"
-frame_progress = 0.75645
+frame_progress = 0.795133
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -241,19 +275,22 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_fldxn")
 show_percentage = false
 
 [node name="DarknessTexture" type="Sprite2D" parent="."]
+z_index = 10
 texture_filter = 2
 position = Vector2(-84, 336)
 scale = Vector2(4.285, 4.285)
 texture = ExtResource("5_5vcen")
 offset = Vector2(-19.3699, 82.147)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animated_sprite", "candle")]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animated_sprite", "candle", "fire")]
 libraries = {
 &"": SubResource("AnimationLibrary_bcdl3")
 }
 script = ExtResource("4_5vcen")
 animated_sprite = NodePath("../FireAnimation")
 candle = NodePath("..")
+fire = NodePath("../FireArea")
 
 [connection signal="body_entered" from="Jump-Area" to="Jump-Area" method="_on_body_entered"]
 [connection signal="body_exited" from="Jump-Area" to="Jump-Area" method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
