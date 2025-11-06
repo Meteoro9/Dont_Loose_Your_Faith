@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="1_gxp0d"]
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
 [ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="2_rbjd4"]
-[ext_resource type="PackedScene" uid="uid://bbys1i7x6dn27" path="res://Scenes/water_drop.tscn" id="3_45nnj"]
 [ext_resource type="Script" uid="uid://mc6cboe8n1lu" path="res://Scripts/Player/camera_follow.gd" id="3_rbjd4"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/water_drop_spawner.tscn" id="4_7ugqr"]
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/water_area.tscn" id="4_piwxh"]
+[ext_resource type="PackedScene" uid="uid://bqmlk6xtsc7ak" path="res://Scenes/wind_area.tscn" id="7_7ugqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjd4"]
 texture = ExtResource("1_i2phc")
@@ -4192,22 +4192,29 @@ sources/0 = SubResource("TileSetAtlasSource_rbjd4")
 position = Vector2(1878.64, 2537.71)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAIAAUAAAAHAAYAAAAJAAUAAAAHAAYAAAAHAAUAAAAHAAYAAAAGAAUAAAAHAAcAAAAKAAUAAAAHAAMAAAAMAAMAAAAHAAMAAAALAAMAAAAHAAcAAAAEAAMAAAAHAAcAAAAGAAMAAAAHAAMAAAAFAAMAAAAHAAYAAAAFAAEAAAAIAAQAAAAKAAEAAAAHAAMAAAAKAAQAAAAAAAQAAAAJAP//AAAHAA0AAAAIAP//AAAHAA4AAAAJAAAAAAAHABAAAAAIAAAAAAAHABEAAAAIAAEAAAAIAAIAAAAJAAEAAAAIAAMAAAA=")
+tile_map_data = PackedByteArray("AAAIAAUAAAAHAAYAAAAJAAUAAAAHAAYAAAAHAAUAAAAHAAYAAAAGAAUAAAAHAAcAAAAKAAUAAAAHAAMAAAAMAAMAAAAHAAMAAAALAAMAAAAHAAcAAAAEAAMAAAAHAAcAAAAJAAEAAAAHAA0AAAAHAAEAAAAHAA4AAAAIAAEAAAAAAAQAAAAHAAIAAAAIAAIAAAAJAAIAAAAIAAEAAAAIAAIAAAAIAAMAAAAFAAMAAAAHAAMAAAAHAP//AAAHAAMAAAAGAP//AAAHAAcAAAALAP3/AAAAAAUAAAALAP7/AAAAAAUAAAALAPz/AAAAAAQAAAAMAPz/AAAHAAMAAAAKAP7/AAAHAA4AAAAMAP7/AAAHAA0AAAAKAP//AAAIAAIAAAAMAP//AAAIAAEAAAALAP//AAAIAAMAAAAGAP3/AAAHAAgAAAAFAP3/AAAHAAkAAAAEAP3/AAAHAAoAAAAJAPv/AAAHAAgAAAAIAPv/AAAHAAoAAAA=")
 tile_set = SubResource("TileSet_piwxh")
-
-[node name="WaterDrop" parent="." instance=ExtResource("3_45nnj")]
-position = Vector2(484, 146)
 
 [node name="WaterDrop_Spawner" parent="." instance=ExtResource("4_7ugqr")]
 position = Vector2(307, -70)
 
+[node name="WaterAreas" type="Node2D" parent="."]
+
+[node name="WaterArea" parent="WaterAreas" instance=ExtResource("4_piwxh")]
+position = Vector2(546, 99)
+scale = Vector2(4.04, 3)
+
+[node name="WaterArea2" parent="WaterAreas" instance=ExtResource("4_piwxh")]
+position = Vector2(736, -156)
+scale = Vector2(3.16, 9.12)
+
 [node name="Candle-Player" parent="." instance=ExtResource("2_rbjd4")]
-position = Vector2(526, 277)
+position = Vector2(545, 277)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 zoom = Vector2(2, 2)
 script = ExtResource("3_rbjd4")
 player = NodePath("../Candle-Player")
 
-[node name="WaterArea" parent="." instance=ExtResource("4_piwxh")]
-position = Vector2(672, 290)
+[node name="WindArea" parent="." instance=ExtResource("7_7ugqr")]
+position = Vector2(413, 292)
