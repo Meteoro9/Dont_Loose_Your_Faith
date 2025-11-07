@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7j0bgreic0dy"]
+
+[ext_resource type="Script" uid="uid://myajf8aimvsl" path="res://Scripts/Utils/timer_record.gd" id="1_sc1f6"]
+
+[node name="ShowTimer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.5
+offset_right = 51.5
+offset_bottom = 47.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+script = ExtResource("1_sc1f6")

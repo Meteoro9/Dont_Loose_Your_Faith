@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3i70u2s72jdx"]
 
-[ext_resource type="Script" uid="uid://cw574n66mn4c5" path="res://Scripts/water_area.gd" id="1_1mmq0"]
+[ext_resource type="Script" uid="uid://cw574n66mn4c5" path="res://Scripts/Enemies/water_area.gd" id="1_1mmq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p35db"]
 

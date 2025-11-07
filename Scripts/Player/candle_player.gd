@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -550.0
 
 @export var fire_animation : Area2D
 
+# Script de plantilla integrada en el motor, muy leves modificaciones
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -20,7 +21,11 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("izquierda", "derecha")
 	if direction:
 		velocity.x = direction * SPEED
+		
+		# Ejecutamos mecánica principal
 		fire_animation.take_damage(1.5)
+		if fire_animation.current_flame <= 0:
+			fire_animation.kill()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

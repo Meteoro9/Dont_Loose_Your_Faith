@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cri2ewgfn2l0q"]
 
-[ext_resource type="Script" uid="uid://bd76k7rthde6x" path="res://Scripts/water_drop_spawner.gd" id="1_qycks"]
-[ext_resource type="PackedScene" uid="uid://bbys1i7x6dn27" path="res://Scenes/water_drop.tscn" id="2_guk4u"]
+[ext_resource type="Script" uid="uid://bd76k7rthde6x" path="res://Scripts/Enemies/water_drop_spawner.gd" id="1_qycks"]
+[ext_resource type="PackedScene" uid="uid://bbys1i7x6dn27" path="res://Scenes/Enemies/water_drop.tscn" id="2_guk4u"]
 
 [node name="WaterDrop_Spawner" type="Node2D"]
 script = ExtResource("1_qycks")

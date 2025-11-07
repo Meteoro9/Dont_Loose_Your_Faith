@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbys1i7x6dn27"]
 
-[ext_resource type="Script" uid="uid://ccoxn5s5uba5v" path="res://Scripts/water_drop.gd" id="1_gf4bk"]
-[ext_resource type="Texture2D" uid="uid://ctkpe8woawwsl" path="res://Assets/Waterdrop.png" id="1_kkpwa"]
+[ext_resource type="Script" uid="uid://ccoxn5s5uba5v" path="res://Scripts/Enemies/water_drop.gd" id="1_6p86p"]
+[ext_resource type="Texture2D" uid="uid://ctkpe8woawwsl" path="res://Assets/Waterdrop.png" id="2_eeq30"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kkpwa"]
 friction = 0.4
@@ -17,11 +17,11 @@ radius = 7.07107
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_kkpwa")
 gravity_scale = 0.38
-script = ExtResource("1_gf4bk")
+script = ExtResource("1_6p86p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_kkpwa")
+texture = ExtResource("2_eeq30")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
