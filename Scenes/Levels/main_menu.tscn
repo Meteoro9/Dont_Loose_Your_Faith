@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddjkpitw1o2xu"]
+
+[ext_resource type="Texture2D" uid="uid://bvnmnw6djf0gi" path="res://Assets/logo editado.png" id="1_qqk0j"]
+[ext_resource type="Script" uid="uid://buduawctj7juf" path="res://Scripts/Utils/main_menu.gd" id="1_vytfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n722"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqk0j"]
+bg_color = Color(0.45098, 0.639216, 0.658824, 0.929412)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.350742, 0.994477, 1, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vytfc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.215686)
+shadow_size = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vytfc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.816355, 0.3935, 0.259987, 1)
+self_modulate = Color(0.656265, 0.542759, 0.0997899, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -499.0
+offset_top = 27.0
+offset_right = -459.0
+offset_bottom = 67.0
+grow_horizontal = 0
+scale = Vector2(10.1617, 10.1617)
+texture = ExtResource("1_qqk0j")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 94.0
+offset_right = 417.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "Tus tiempos:"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -468.0
+offset_top = -200.0
+offset_right = -137.0
+offset_bottom = -124.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qqk0j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vytfc")
+text = "Jugar
+"
