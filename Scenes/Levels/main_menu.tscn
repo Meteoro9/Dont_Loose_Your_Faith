@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddjkpitw1o2xu"]
 
-[ext_resource type="Texture2D" uid="uid://bvnmnw6djf0gi" path="res://Assets/logo editado.png" id="1_qqk0j"]
+[ext_resource type="Texture2D" uid="uid://c41ukoec7vqmq" path="res://Assets/logo editado.png" id="1_qqk0j"]
 [ext_resource type="Script" uid="uid://buduawctj7juf" path="res://Scripts/Utils/main_menu.gd" id="1_vytfc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n722"]
@@ -39,8 +39,6 @@ grow_vertical = 2
 script = ExtResource("1_vytfc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.816355, 0.3935, 0.259987, 1)
-self_modulate = Color(0.656265, 0.542759, 0.0997899, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0

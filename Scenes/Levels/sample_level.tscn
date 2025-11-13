@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b5xkdo13aol70"]
+[gd_scene load_steps=12 format=4 uid="uid://b5xkdo13aol70"]
 
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="1_gxp0d"]
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="4_piwxh"]
 [ext_resource type="PackedScene" uid="uid://bqmlk6xtsc7ak" path="res://Scenes/Enemies/wind_area.tscn" id="7_7ugqr"]
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="8_m3nkb"]
+[ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="9_g630t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjd4"]
 texture = ExtResource("1_i2phc")
@@ -4223,3 +4224,6 @@ player = NodePath("../Candle-Player")
 position = Vector2(216, 132)
 
 [node name="ShowTimer" parent="." instance=ExtResource("8_m3nkb")]
+
+[node name="WinArea" parent="." node_paths=PackedStringArray("show_timer") instance=ExtResource("9_g630t")]
+show_timer = NodePath("../ShowTimer")
