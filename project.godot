@@ -8,15 +8,28 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Desafío-7-Definitivo-2"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://b0pi7vexomshk"
 
 [autoload]
 
 GameData="*res://Scripts/Utils/game_data.gd"
+GlobalMusicManager="*uid://blyuq2har1ns"
+
+[dotnet]
+
+project/assembly_name="Desafío-7-Definitivo-2"
 
 [input]
 

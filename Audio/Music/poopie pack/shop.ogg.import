@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7rlvpxelt7uw"
+path="res://.godot/imported/shop.ogg-d5507fea6696f8ab8272e7889e2e079d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/poopie pack/shop.ogg"
+dest_files=["res://.godot/imported/shop.ogg-d5507fea6696f8ab8272e7889e2e079d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

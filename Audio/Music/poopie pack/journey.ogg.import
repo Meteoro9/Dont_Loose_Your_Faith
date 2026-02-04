@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkj7cf81jtvom"
+path="res://.godot/imported/journey.ogg-624a1b83bf68ae0dbf35ebf58e76e444.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/poopie pack/journey.ogg"
+dest_files=["res://.godot/imported/journey.ogg-624a1b83bf68ae0dbf35ebf58e76e444.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
