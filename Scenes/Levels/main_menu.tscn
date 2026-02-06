@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c41ukoec7vqmq" path="res://Assets/logo editado.png" id="1_qqk0j"]
 [ext_resource type="Script" uid="uid://buduawctj7juf" path="res://Scripts/Utils/main_menu.gd" id="1_vytfc"]
+[ext_resource type="VideoStream" uid="uid://hf2t57flg264" path="res://Assets/GIFS/sea03.ogv" id="3_t475i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vytfc"]
 bg_color = Color(1, 1, 1, 1)
@@ -65,6 +66,7 @@ text = "Tus tiempos:"
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=2094343631]
+z_index = 2
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -88,6 +90,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="." unique_id=530460084]
+z_index = 2
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -109,6 +112,274 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vytfc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qqk0j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
 text = "LANGUAGE"
+
+[node name="Node" type="Node" parent="." unique_id=556889127]
+
+[node name="Video" type="VideoStreamPlayer" parent="Node" unique_id=2107253081]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 178.0
+offset_top = -184.0
+offset_right = 434.0
+offset_bottom = 72.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video2" type="VideoStreamPlayer" parent="Node" unique_id=302371918]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 359.0
+offset_top = -2.9999847
+offset_right = 615.0
+offset_bottom = 253.00002
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video3" type="VideoStreamPlayer" parent="Node" unique_id=948264958]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = -2.9806519
+offset_top = -3.0
+offset_right = 253.01935
+offset_bottom = 253.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video4" type="VideoStreamPlayer" parent="Node" unique_id=149110937]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 178.01933
+offset_top = 178.0
+offset_right = 434.01935
+offset_bottom = 434.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video5" type="VideoStreamPlayer" parent="Node" unique_id=1826876530]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 902.0
+offset_top = -184.0
+offset_right = 1158.0
+offset_bottom = 72.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video6" type="VideoStreamPlayer" parent="Node" unique_id=1768132766]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 540.01935
+offset_top = -184.0
+offset_right = 796.01935
+offset_bottom = 72.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video7" type="VideoStreamPlayer" parent="Node" unique_id=1678845339]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 721.0
+offset_top = -3.0
+offset_right = 977.0
+offset_bottom = 253.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video8" type="VideoStreamPlayer" parent="Node" unique_id=2141240117]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 902.0
+offset_top = 178.0
+offset_right = 1158.0
+offset_bottom = 434.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video9" type="VideoStreamPlayer" parent="Node" unique_id=1407802046]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 540.01935
+offset_top = 178.0
+offset_right = 796.01935
+offset_bottom = 434.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video10" type="VideoStreamPlayer" parent="Node" unique_id=838714691]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 721.0193
+offset_top = 359.0
+offset_right = 977.0193
+offset_bottom = 615.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video11" type="VideoStreamPlayer" parent="Node" unique_id=354144215]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 1083.0193
+offset_top = -3.0
+offset_right = 1339.0193
+offset_bottom = 253.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video12" type="VideoStreamPlayer" parent="Node" unique_id=334584083]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 1083.0
+offset_top = 359.0
+offset_right = 1339.0
+offset_bottom = 615.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video13" type="VideoStreamPlayer" parent="Node" unique_id=1917553412]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 902.0193
+offset_top = 540.0
+offset_right = 1158.0193
+offset_bottom = 796.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video14" type="VideoStreamPlayer" parent="Node" unique_id=483256174]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 1264.0193
+offset_top = 178.0
+offset_right = 1520.0193
+offset_bottom = 434.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video15" type="VideoStreamPlayer" parent="Node" unique_id=229103615]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 359.01935
+offset_top = 359.0
+offset_right = 615.01935
+offset_bottom = 615.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video16" type="VideoStreamPlayer" parent="Node" unique_id=1035792181]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 540.0193
+offset_top = 540.0
+offset_right = 796.0193
+offset_bottom = 796.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video17" type="VideoStreamPlayer" parent="Node" unique_id=374386623]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = -2.980667
+offset_top = 359.0
+offset_right = 253.01933
+offset_bottom = 615.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video18" type="VideoStreamPlayer" parent="Node" unique_id=1004289106]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 178.01935
+offset_top = 540.0
+offset_right = 434.01935
+offset_bottom = 796.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
+
+[node name="Video19" type="VideoStreamPlayer" parent="Node" unique_id=2139235776]
+modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+z_index = -2
+texture_filter = 1
+offset_left = 1264.0001
+offset_top = -184.0
+offset_right = 1520.0001
+offset_bottom = 72.0
+rotation = 0.7853982
+mouse_filter = 2
+stream = ExtResource("3_t475i")
+autoplay = true
+loop = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="button_up" from="Button2" to="." method="on_language_pressed"]

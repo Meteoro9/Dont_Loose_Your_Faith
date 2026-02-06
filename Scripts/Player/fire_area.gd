@@ -7,6 +7,8 @@ var is_alive := true # Para evitar loopear método kill()
 @export var bar : ProgressBar
 @export var fire_animation : AnimatedSprite2D
 
+@export var loose_menu : PackedScene
+
 @onready var alive_audio = $FlameAlive
 @onready var kill_audio = $FlameKill
 
@@ -25,6 +27,10 @@ func kill():
 	alive_audio.stop() # Apagamos el sonido de fuego vivo
 	kill_audio.play() # Reproducimos sonido de muerte
 	is_alive = false
+	
+	GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
+	var scene = loose_menu.instantiate()
+	get_tree().root.add_child(scene)
 
 func _process(_delta: float) -> void:
 	if current_flame <= 0 and is_alive: # Si murió en este frame

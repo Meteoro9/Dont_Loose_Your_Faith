@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dpscdhtb7w28j" path="res://Scripts/Player/candle_animations.gd" id="4_5vcen"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="4_ohdre"]
 [ext_resource type="Texture2D" uid="uid://bmi5e6nspbxt3" path="res://Assets/Darkness.png" id="5_5vcen"]
+[ext_resource type="PackedScene" uid="uid://bio3abrceg83a" path="res://Scenes/Levels/loose_menu.tscn" id="5_mb1rh"]
 [ext_resource type="AudioStream" uid="uid://b42330n7sgcds" path="res://Audio/Player/candle_flame_SFX.ogg" id="5_pgpgy"]
 [ext_resource type="Script" uid="uid://cdekpneeufghb" path="res://Scripts/Player/fire_area.gd" id="6_fldxn"]
 [ext_resource type="AudioStream" uid="uid://j7wcpo8751uk" path="res://Audio/Player/flame_off_SFX.ogg" id="6_mb1rh"]
@@ -284,6 +285,7 @@ scale = Vector2(0.55, 0.55)
 script = ExtResource("6_fldxn")
 bar = NodePath("../CanvasLayer/ProgressBar")
 fire_animation = NodePath("../FireAnimation")
+loose_menu = ExtResource("5_mb1rh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea" unique_id=1772313496]
 position = Vector2(0, 2.89425)
