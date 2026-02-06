@@ -4231,7 +4231,7 @@ position = Vector2(347, -222)
 [node name="ShowTimer" parent="." unique_id=1522023902 instance=ExtResource("8_m3nkb")]
 
 [node name="WinArea" parent="." unique_id=906749016 node_paths=PackedStringArray("show_timer") instance=ExtResource("9_g630t")]
-position = Vector2(278, -63)
+position = Vector2(253, -13)
 show_timer = NodePath("../ShowTimer")
 
 [node name="Limits" type="StaticBody2D" parent="." unique_id=1148835502]

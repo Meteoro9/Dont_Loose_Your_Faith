@@ -15,6 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if anim_player:
 			anim_player.play("Goodbye_Darkness")
 		
+		GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.WIN
 		
 		var scene = win_scene.instantiate()
 		get_tree().root.add_child(scene)
