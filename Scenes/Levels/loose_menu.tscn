@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bio3abrceg83a"]
 
+[ext_resource type="Script" uid="uid://cakfrljvs8xri" path="res://Scripts/Utils/loose_menu.gd" id="1_pbk73"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rifxn"]
 bg_color = Color(0.744319, 1.82897e-06, 4.81307e-07, 1)
 corner_radius_top_left = 16
@@ -88,6 +90,7 @@ _data = {
 }
 
 [node name="LooseMenu" type="CanvasLayer" unique_id=1694529977]
+script = ExtResource("1_pbk73")
 
 [node name="Button" type="Button" parent="." unique_id=1980834350]
 modulate = Color(1, 1, 1, 0)
@@ -139,3 +142,6 @@ text = "Ir al menú
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1757099065]
 libraries/ = SubResource("AnimationLibrary_rifxn")
 autoplay = &"visible_init"
+
+[connection signal="pressed" from="Button" to="." method="on_retry_pressed"]
+[connection signal="pressed" from="Button2" to="." method="on_go_menu_pressed"]
