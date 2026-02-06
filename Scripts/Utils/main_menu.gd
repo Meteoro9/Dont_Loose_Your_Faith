@@ -2,10 +2,13 @@ extends Control
 class_name MainMenu
 
 @onready var label = $Label
-var languages: Array[String] = ["en_US", "es_AR"]
+var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN"]
 
-var your_records_string: Array[String] = ["Your records: \n", "Tus tiempos: \n"]
-var list_empty_string: Array[String] = ["(No records registered yet)", "(Aún no se registró ningún tiempo)"]
+var your_records_string: Array[String] = ["Your records: \n", "Tus tiempos: \n", 
+	"Seus tempos: \n", "你的时间：\n"]
+var list_empty_string: Array[String] = ["(No records registered yet)", 
+	"(Aún no se registró ningún tiempo)", "(Ainda não há tempos registrados)", 
+	"（尚未记录任何时间）"]
 
 func _ready() -> void:
 	update_text()
