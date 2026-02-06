@@ -54,7 +54,7 @@ izquierda={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localization/es_AR.po", "res://Localization/en_US.po", "res://Localization/pt_BR.po", "res://Localization/zh_CN.po")
+locale/translations=PackedStringArray("res://Localization/es_AR.po", "res://Localization/en_US.po", "res://Localization/pt_BR.po", "res://Localization/zh_CN.po", "res://Localization/ja_JP.po")
 locale/translations_pot_files=PackedStringArray("res://Scenes/Levels/main_menu.tscn", "res://Scenes/Levels/loose_menu.tscn", "res://Scenes/Levels/win_menu.tscn")
 
 [rendering]
