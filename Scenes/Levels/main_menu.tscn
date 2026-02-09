@@ -66,32 +66,6 @@ theme_override_font_sizes/font_size = 32
 text = "TIMES"
 vertical_alignment = 1
 
-[node name="LabelDay" type="Label" parent="." unique_id=1314790330]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 242.0
-offset_right = 565.0
-offset_bottom = -488.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "DAY"
-vertical_alignment = 1
-
-[node name="LabelHour" type="Label" parent="." unique_id=545510680]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 411.0
-offset_right = 734.0
-offset_bottom = -488.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "HOUR"
-vertical_alignment = 1
-
 [node name="LabelTimesRecord" type="Label" parent="." unique_id=1766922494]
 layout_mode = 1
 anchors_preset = 9
@@ -105,26 +79,52 @@ theme_override_font_sizes/font_size = 32
 text = "TIMES-LOG"
 vertical_alignment = 1
 
+[node name="LabelDay" type="Label" parent="." unique_id=1314790330]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 338.0
+offset_right = 661.0
+offset_bottom = -488.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "DAY"
+vertical_alignment = 1
+
 [node name="LabelDayRecord" type="Label" parent="." unique_id=1659871211]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 242.0
+offset_left = 338.0
 offset_top = 106.0
-offset_right = 565.0
+offset_right = 661.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32
 text = "DAY-LOG"
 vertical_alignment = 1
 
+[node name="LabelHour" type="Label" parent="." unique_id=545510680]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 482.0
+offset_right = 805.0
+offset_bottom = -488.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "HOUR"
+vertical_alignment = 1
+
 [node name="LabelHourRecord" type="Label" parent="." unique_id=2008669838]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 411.0
+offset_left = 482.0
 offset_top = 106.0
-offset_right = 734.0
+offset_right = 805.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32

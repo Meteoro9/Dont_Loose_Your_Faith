@@ -1,13 +1,15 @@
 extends Node
 class_name GamePersistentData
 
-# Aquí podemos ir alterando el array para añadir capas como fecha del record, hora, etc
-var records : Array[float] = []
+const SAVE_PATH := "user://save.tres"
+const MAX_RECORDS_PER_LEVEL := 9
+
+var data: SaveData
+
 
 func _ready() -> void:
 	load_data()
 
-<<<<<<< HEAD
 
 func add_time(level_id: String, new_time: float) -> void:
 	var record := RecordData.new()
@@ -64,21 +66,3 @@ func load_data() -> void:
 			data = SaveData.new()
 	else:
 		data = SaveData.new()
-=======
-func add_time(new_time : float):
-	records.append(new_time)
-	
-	if records.size() > 9:
-		records.pop_front()
-	
-	var save = SaveData.new()
-	save.save_times(records)
-	ResourceSaver.save(save, "user://save.res")
-
-func load_data():
-	if ResourceLoader.exists("user://save.tres"):
-		var save = load("user://save.res")
-		
-		if save:
-			records = save.records
->>>>>>> parent of 076d508 (Nueva implementación guardado NO FUNCIONAL)
