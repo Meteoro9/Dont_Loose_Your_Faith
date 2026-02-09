@@ -10,11 +10,23 @@ var data: SaveData
 func _ready() -> void:
 	load_data()
 
+func _get_level(level_id: String) -> LevelData:
+	for level in data.levels:
+		if level.level_id == level_id:
+			return level
+	return null
 
 func add_time(level_id: String, new_time: float) -> void:
+	var level := _get_level(level_id)
+	
+	if level == null:
+		level = LevelData.new()
+		level.level_id = level_id
+		data.levels.append(level)
+	
 	var record := RecordData.new()
 	record.time = new_time
-
+	
 	var datetime := Time.get_datetime_dict_from_system()
 	record.day = "%04d-%02d-%02d" % [
 		datetime.year,
@@ -26,33 +38,13 @@ func add_time(level_id: String, new_time: float) -> void:
 		datetime.minute,
 		datetime.second
 	]
-
-	var level_data := _get_or_create_level(level_id)
-	level_data.records.append(record)
-
-	if level_data.records.size() > MAX_RECORDS_PER_LEVEL:
-		level_data.records.pop_front()
-
+	
+	level.records.append(record)
+	
+	if level.records.size() > MAX_RECORDS_PER_LEVEL:
+		level.records.pop_front()
+	
 	save_data()
-
-
-func get_records(level_id: String) -> Array[RecordData]:
-	for level_data in data.levels:
-		if level_data.level_id == level_id:
-			return level_data.records
-
-	return [] as Array[RecordData]  # ← Array tipado explícito
-
-
-func _get_or_create_level(level_id: String) -> LevelData:
-	for level_data in data.levels:
-		if level_data.level_id == level_id:
-			return level_data
-
-	var new_level := LevelData.new()
-	new_level.level_id = level_id
-	data.levels.append(new_level)
-	return new_level
 
 
 func save_data() -> void:
@@ -66,3 +58,9 @@ func load_data() -> void:
 			data = SaveData.new()
 	else:
 		data = SaveData.new()
+
+func get_records(level_id: String) -> Array[RecordData]:
+	var level := _get_level(level_id)
+	if level:
+		return level.records
+	return []
