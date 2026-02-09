@@ -4,8 +4,6 @@ class_name MainMenu
 @onready var label_times_record = $LabelTimesRecord
 @onready var label_day_record = $LabelDayRecord
 @onready var label_hour_record = $LabelHourRecord
-const LEVEL_ID := "level_sample"
-
 var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU"]
 var current_lang := "en_US"
 
@@ -19,33 +17,28 @@ func _ready() -> void:
 func update_text():
 	current_lang = TranslationServer.get_locale()
 	var current_index = languages.find(current_lang)
-	if current_index == -1:
-		current_index = 0
-
-	var records: Array[RecordData] = GameData.get_records(LEVEL_ID)
-
-	if records.is_empty():
-		label_times_record.text = list_empty_string[current_index]
-		label_day_record.text = ""
-		label_hour_record.text = ""
-		return
-
-	var ordered_records := records.duplicate()
-	ordered_records.reverse()
-
-	var times_text := ""
-	var days_text := ""
-	var hours_text := ""
-
-	for record in ordered_records:
-		times_text += "* %.2f\n" % record.time
-		days_text += record.day + "\n"
-		hours_text += record.hour + "\n"
-
-	label_times_record.text = times_text
-	label_day_record.text = days_text
-	label_hour_record.text = hours_text
-
+	if current_index == -1: current_index = 0
+	var final_text : String
+	var record_list = GameData.records
+	
+	if record_list.is_empty():
+		final_text = list_empty_string[current_index]
+	else:
+		# Duplicamos el array y lo reordenamos al revés, el último queda arriba
+		var splash_record_list = record_list.duplicate()
+		splash_record_list.reverse()
+		for record in splash_record_list:
+			# Creamos un string formateado
+			var time_formatted = "%.2f" % record
+			# Lo añadimos a el string final
+			final_text += "* " + time_formatted + "\n"
+	
+	# Actualizamos label
+	label_times_record.text = final_text
+	
+	# Cambiar estado de la música:
+	await get_tree().process_frame # Esperamos el primer frame
+	GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.MENU
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Levels/sample_level.tscn")

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b8c2xm20s8hmt"]
+[gd_scene load_steps=2 format=3 uid="uid://b8c2xm20s8hmt"]
 
-[ext_resource type="Script" uid="uid://c226q5g617ah0" path="res://Scripts/Utils/game_data.gd" id="1_wt1kw"]
+[ext_resource type="Script" path="res://Scripts/Utils/game_data.gd" id="1_wt1kw"]
 
-[node name="GamePersistentData" type="Node" unique_id=1928395331]
+[node name="GamePersistentData" type="Node"]
 script = ExtResource("1_wt1kw")

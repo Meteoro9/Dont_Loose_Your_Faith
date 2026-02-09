@@ -1,66 +1,25 @@
 extends Node
 class_name GamePersistentData
 
-const SAVE_PATH := "user://save.tres"
-const MAX_RECORDS_PER_LEVEL := 9
-
-var data: SaveData
-
+# Aquí podemos ir alterando el array para añadir capas como fecha del record, hora, etc
+var records : Array[float] = []
 
 func _ready() -> void:
 	load_data()
 
-func _get_level(level_id: String) -> LevelData:
-	for level in data.levels:
-		if level.level_id == level_id:
-			return level
-	return null
-
-func add_time(level_id: String, new_time: float) -> void:
-	var level := _get_level(level_id)
+func add_time(new_time : float):
+	records.append(new_time)
 	
-	if level == null:
-		level = LevelData.new()
-		level.level_id = level_id
-		data.levels.append(level)
+	if records.size() > 9:
+		records.pop_front()
 	
-	var record := RecordData.new()
-	record.time = new_time
-	
-	var datetime := Time.get_datetime_dict_from_system()
-	record.day = "%04d-%02d-%02d" % [
-		datetime.year,
-		datetime.month,
-		datetime.day
-	]
-	record.hour = "%02d:%02d:%02d" % [
-		datetime.hour,
-		datetime.minute,
-		datetime.second
-	]
-	
-	level.records.append(record)
-	
-	if level.records.size() > MAX_RECORDS_PER_LEVEL:
-		level.records.pop_front()
-	
-	save_data()
+	var save = SaveData.new()
+	save.save_times(records)
+	ResourceSaver.save(save, "user://save.res")
 
-
-func save_data() -> void:
-	ResourceSaver.save(data, SAVE_PATH)
-
-
-func load_data() -> void:
-	if ResourceLoader.exists(SAVE_PATH):
-		data = load(SAVE_PATH) as SaveData
-		if data == null:
-			data = SaveData.new()
-	else:
-		data = SaveData.new()
-
-func get_records(level_id: String) -> Array[RecordData]:
-	var level := _get_level(level_id)
-	if level:
-		return level.records
-	return []
+func load_data():
+	if ResourceLoader.exists("user://save.tres"):
+		var save = load("user://save.res")
+		
+		if save:
+			records = save.records
