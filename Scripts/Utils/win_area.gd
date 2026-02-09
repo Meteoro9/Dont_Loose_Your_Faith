@@ -5,6 +5,7 @@ class_name WinArea
 @export var loose_scene : PackedScene
 @export var is_win : bool
 @export var show_timer : CanvasLayer
+@export var level_id : int
 
 var timer : TimerRecord = null
 
@@ -26,7 +27,7 @@ func _on_body_entered(body: Node2D) -> void:
 			var scene = win_scene.instantiate()
 			get_tree().root.add_child(scene)
 			
-			GameData.add_time(timer.current_time)
+			GameData.add_record(level_id, timer.current_time)
 			
 		elif not is_win: 
 			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
