@@ -15,33 +15,35 @@ var list_empty_string: Array[String] = ["(No records registered yet)",
 
 func _ready() -> void:
 	update_text()
+	# Actualizar la música al empezar
+	GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.MENU
 
 func update_text():
 	current_lang = TranslationServer.get_locale()
 	var current_index = languages.find(current_lang)
 	if current_index == -1:
 		current_index = 0
-
+	
 	var records: Array[RecordData] = GameData.get_records(LEVEL_ID)
-
+	
 	if records.is_empty():
 		label_times_record.text = list_empty_string[current_index]
 		label_day_record.text = ""
 		label_hour_record.text = ""
 		return
-
+	
 	var ordered_records := records.duplicate()
 	ordered_records.reverse()
-
+	
 	var times_text := ""
 	var days_text := ""
 	var hours_text := ""
-
+	
 	for record in ordered_records:
 		times_text += "* %.2f\n" % record.time
 		days_text += record.day + "\n"
 		hours_text += record.hour + "\n"
-
+	
 	label_times_record.text = times_text
 	label_day_record.text = days_text
 	label_hour_record.text = hours_text
