@@ -1,23 +1,23 @@
-extends RigidBody2D
-class_name WaterDrop
+extends Area2D
+class_name WoodBehaviour
 
 var player_inside : CandlePlayer = null
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is FireBehaviour:
 		player_inside = area.get_parent()
-		print("Le cayó agua al player")
-
-func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area == player_inside:
-		player_inside = null
-		print("El agua salió del player")
+		print("El player quemó la madera")
 
 func _process(_delta: float) -> void:
 	if player_inside:
 		var fire = player_inside.get_node("FireArea")
-		if fire:
-			fire.kill()
+		player_inside = null
+		if fire and $AnimationPlayer.is_playing():
+			$AnimationPlayer.play("fire")
 
 func _on_timer_timeout() -> void:
 	queue_free()
+
+func kill():
+	$Timer.start()
+	print("Comenzó el timer")

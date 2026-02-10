@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbys1i7x6dn27"]
+[gd_scene format=3 uid="uid://bbys1i7x6dn27"]
 
 [ext_resource type="Script" uid="uid://ccoxn5s5uba5v" path="res://Scripts/Enemies/water_drop.gd" id="1_6p86p"]
-[ext_resource type="Texture2D" uid="uid://ctkpe8woawwsl" path="res://Assets/Waterdrop.png" id="2_eeq30"]
+[ext_resource type="Texture2D" uid="uid://ctkpe8woawwsl" path="res://Assets/Elements/Waterdrop.png" id="2_eeq30"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kkpwa"]
 friction = 0.4

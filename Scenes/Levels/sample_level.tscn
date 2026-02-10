@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqmlk6xtsc7ak" path="res://Scenes/Enemies/wind_area.tscn" id="7_7ugqr"]
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="8_m3nkb"]
 [ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="9_g630t"]
+[ext_resource type="PackedScene" uid="uid://gb4cqo4ww5vd" path="res://Scenes/Elements/wood.tscn" id="11_42xj8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjd4"]
 texture = ExtResource("1_i2phc")
@@ -4307,3 +4308,6 @@ shape = SubResource("RectangleShape2D_g630t")
 position = Vector2(324, 392)
 scale = Vector2(73.14805, 0.060358144)
 shape = SubResource("RectangleShape2D_g630t")
+
+[node name="Wood" parent="." unique_id=217972568 instance=ExtResource("11_42xj8")]
+position = Vector2(207, 49)

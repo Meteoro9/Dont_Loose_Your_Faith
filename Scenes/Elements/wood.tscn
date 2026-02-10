@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://gb4cqo4ww5vd"]
+
+[ext_resource type="Script" uid="uid://lv6ve4jxir0u" path="res://Scripts/Elements/wood_behaviour.gd" id="1_dsshd"]
+[ext_resource type="Texture2D" uid="uid://lvk0ui6gexa5" path="res://Assets/Elements/Wood.png" id="2_ogt1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75auj"]
+size = Vector2(32, 32)
+
+[sub_resource type="Curve" id="Curve_dsshd"]
+_data = [Vector2(0.028248586, 0), 0.0, 0.0, 0, 0, Vector2(0.22598869, 0.6731518), 0.0, 0.0, 0, 0, Vector2(0.59322035, 0.26848257), 0.0, 0.0, 0, 0, Vector2(0.9830509, 0.688716), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_ogt1t"]
+curve = SubResource("Curve_dsshd")
+
+[sub_resource type="Gradient" id="Gradient_u2buo"]
+offsets = PackedFloat32Array(0, 0.815625, 1)
+colors = PackedColorArray(1, 0.14117648, 0.019607844, 1, 0.1463739, 0.0035687801, 0, 1, 0.34532225, 0.34532225, 0.34532225, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3g3pu"]
+gradient = SubResource("Gradient_u2buo")
+
+[sub_resource type="Curve" id="Curve_6g0yq"]
+_data = [Vector2(0, 0.5953308), 0.0, 0.0, 0, 0, Vector2(0.27683616, 1), 0.0, 0.0, 0, 0, Vector2(0.69491524, 0.20622575), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_lwbin"]
+curve = SubResource("Curve_6g0yq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8h1ud"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.2
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, -3, 0)
+scale_min = 15.0
+scale_max = 25.0
+scale_curve = SubResource("CurveTexture_lwbin")
+color = Color(0.99999994, 0.13925415, 0.020450564, 1)
+color_ramp = SubResource("GradientTexture1D_3g3pu")
+alpha_curve = SubResource("CurveTexture_ogt1t")
+hue_variation_min = -0.010000022
+hue_variation_max = 0.13999997
+anim_speed_max = 5.23
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsshd"]
+size = Vector2(32, 32)
+
+[sub_resource type="Animation" id="Animation_f636n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireParticles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_75auj")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionBody/CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_dsshd")]
+}
+
+[sub_resource type="Animation" id="Animation_ygv67"]
+resource_name = "fire"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireParticles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.13333333, 2.8666666, 4.866667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.9838117, 0.9838117, 0.9838117, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.5666666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"kill"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionBody/CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.002893, 4.1597457),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_dsshd"), SubResource("RectangleShape2D_dsshd"), null]
+}
+
+[sub_resource type="Animation" id="Animation_jiro1"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireParticles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_75auj")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionBody/CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_dsshd")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_875go"]
+_data = {
+&"RESET": SubResource("Animation_f636n"),
+&"fire": SubResource("Animation_ygv67"),
+&"idle": SubResource("Animation_jiro1")
+}
+
+[node name="Wood" type="Area2D" unique_id=217972568]
+script = ExtResource("1_dsshd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003002413]
+shape = SubResource("RectangleShape2D_75auj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1395169595]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ogt1t")
+
+[node name="Timer" type="Timer" parent="." unique_id=747048196]
+wait_time = 2.0
+
+[node name="FireParticles" type="GPUParticles2D" parent="." unique_id=1143732081]
+scale = Vector2(18.260193, 17.920134)
+amount = 30
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_8h1ud")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=159882937]
+libraries/ = SubResource("AnimationLibrary_875go")
+autoplay = &"idle"
+
+[node name="CollisionBody" type="StaticBody2D" parent="." unique_id=2120108839]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBody" unique_id=1808627332]
+shape = SubResource("RectangleShape2D_dsshd")
+debug_color = Color(0.84975076, 0.051443428, 0.88807106, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
