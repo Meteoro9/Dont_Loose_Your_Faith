@@ -25,7 +25,7 @@ msgstr "Your records"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "DAY"
-msgstr "Day"
+msgstr "Date"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "HOUR"

@@ -25,7 +25,7 @@ msgstr "Tus tiempos"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "DAY"
-msgstr "Día"
+msgstr "Fecha"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "HOUR"
