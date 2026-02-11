@@ -7,7 +7,8 @@ enum ButtonColor { YELLOW , RED }
 @export var color_state : ButtonColor = ButtonColor.YELLOW
 @export var button_to_unlock : ButtonBehaviour
 var is_locking := true
-#@export var key_to_unlock
+@export var key_to_unlock : KeyCollectable
+@onready var area_unlock = $"Area Unlock"
 
 func _ready() -> void:
 	if color_state == ButtonColor.YELLOW: $Sprite2D.texture = texture_yellow
@@ -19,11 +20,16 @@ func _process(_delta: float) -> void:
 		if button_to_unlock.is_active:
 			is_locking = false
 			$AnimationPlayer.play("unlock")
-	#elif key_to_unlock:
-
-
+	#if key_to_unlock: # hay que plantear la misma lógica pero al tocar la llave
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "unlock":
 		await $AnimationPlayer.animation_finished
 		queue_free()
+
+
+func _on_area_unlock_body_entered(body: Node2D) -> void:
+	if body is CandlePlayer and is_locking:
+		if key_to_unlock.is_picked:
+			is_locking = false
+			$AnimationPlayer.play("unlock")

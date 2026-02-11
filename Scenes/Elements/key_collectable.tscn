@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b8hgaeqrjfyrn"]
+
+[ext_resource type="Script" uid="uid://ce0pu2hv7at54" path="res://Scripts/Elements/key_behaviour.gd" id="1_3w8eu"]
+[ext_resource type="Texture2D" uid="uid://dm1pxip7ru7iv" path="res://Assets/Elements/Yellow Key.png" id="2_pu7up"]
+[ext_resource type="Texture2D" uid="uid://b21wv7ncx6y2b" path="res://Assets/Elements/Red Key.png" id="2_whslx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whslx"]
+size = Vector2(19, 17)
+
+[node name="Key Collectable" type="Area2D" unique_id=462888915]
+script = ExtResource("1_3w8eu")
+texture_red = ExtResource("2_whslx")
+texture_yellow = ExtResource("2_pu7up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1772460519]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_whslx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1950849438]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pu7up")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

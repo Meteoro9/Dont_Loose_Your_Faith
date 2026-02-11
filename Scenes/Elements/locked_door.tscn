@@ -96,6 +96,9 @@ _data = {
 &"unlock": SubResource("Animation_em5ny")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfgak"]
+size = Vector2(42, 35.5)
+
 [node name="Locked Door" type="StaticBody2D" unique_id=173566127]
 script = ExtResource("1_rnmaq")
 texture_red = ExtResource("2_lsaa3")
@@ -111,4 +114,12 @@ texture = ExtResource("3_bfgak")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=181364359]
 libraries/ = SubResource("AnimationLibrary_g4jnq")
 
+[node name="Area Unlock" type="Area2D" parent="." unique_id=2147202947]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area Unlock" unique_id=1633377221]
+position = Vector2(0, 2.75)
+shape = SubResource("RectangleShape2D_bfgak")
+debug_color = Color(0.94745415, 0.19090885, 0.3384262, 0.41960785)
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="Area Unlock" to="." method="_on_area_unlock_body_entered"]

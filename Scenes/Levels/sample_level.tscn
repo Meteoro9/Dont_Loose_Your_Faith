@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="8_m3nkb"]
 [ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="9_g630t"]
 [ext_resource type="PackedScene" uid="uid://kddljbpd6rq1" path="res://Scenes/Elements/elevator_platform.tscn" id="11_42xj8"]
-[ext_resource type="PackedScene" uid="uid://cy3tu7f5wvque" path="res://Scenes/Elements/button.tscn" id="12_vdvy6"]
-[ext_resource type="PackedScene" uid="uid://b0nwrxefwph4o" path="res://Scenes/Elements/locked_door.tscn" id="13_07d4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjd4"]
 texture = ExtResource("1_i2phc")
@@ -4316,10 +4314,3 @@ position = Vector2(188, -76)
 final_pos = Vector2(188, -256)
 travel_duration = 4.0
 waiting = 3.0
-
-[node name="Button" parent="." unique_id=984176580 instance=ExtResource("12_vdvy6")]
-position = Vector2(209, 145)
-
-[node name="Locked Door" parent="." unique_id=173566127 node_paths=PackedStringArray("button_to_unlock") instance=ExtResource("13_07d4o")]
-position = Vector2(176, 49)
-button_to_unlock = NodePath("../Button")
