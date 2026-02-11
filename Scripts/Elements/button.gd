@@ -2,7 +2,6 @@ extends Area2D
 class_name ButtonBehaviour
 
 enum ButtonColor { YELLOW , RED }
-
 @export var color_state : ButtonColor = ButtonColor.YELLOW
 # Declarar variable exportada Puerta, o al revés en la puerta
 var is_active := false
