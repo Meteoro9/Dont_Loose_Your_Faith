@@ -59,7 +59,8 @@ func update_text():
 	GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.MENU
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Levels/sample_level.tscn")
+	LoadBar.fade_to_scene("res://Scenes/Levels/sample_level.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/Levels/sample_level.tscn")
 
 func on_language_pressed():
 	# Buscamos el índice actual
