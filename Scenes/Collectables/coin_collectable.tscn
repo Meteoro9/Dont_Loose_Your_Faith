@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://c5su7wlh4nf2x"]
+
+[ext_resource type="Script" uid="uid://c3oc57i4e741t" path="res://Scripts/Collectables/coin_collectable.gd" id="1_mqkvl"]
+[ext_resource type="Texture2D" uid="uid://sqrtdwhygkml" path="res://Assets/Elements/Coin Collectable.png" id="2_jcyj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkvl"]
+size = Vector2(37, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwotw"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a72xu"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b73ql"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8it3t"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1xrr"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_744rv"]
+atlas = ExtResource("2_jcyj7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4owbd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwotw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a72xu")
+}],
+"loop": true,
+"name": &"Bronze",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b73ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8it3t")
+}],
+"loop": true,
+"name": &"Gold",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1xrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_744rv")
+}],
+"loop": true,
+"name": &"Silver",
+"speed": 3.0
+}]
+
+[node name="Coin Collectable" type="Area2D" unique_id=2146743414]
+scale = Vector2(0.5, 0.5)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_mqkvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764923484]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_mqkvl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=775924487]
+sprite_frames = SubResource("SpriteFrames_4owbd")
+animation = &"Silver"

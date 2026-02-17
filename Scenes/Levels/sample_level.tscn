@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="8_42xj8"]
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="8_m3nkb"]
 [ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="9_g630t"]
+[ext_resource type="PackedScene" uid="uid://c5su7wlh4nf2x" path="res://Scenes/Collectables/coin_collectable.tscn" id="12_07d4o"]
 [ext_resource type="PackedScene" uid="uid://ulmrfikmm8mi" path="res://Scenes/Enemies/bad_slime.tscn" id="12_vdvy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjd4"]
@@ -5204,3 +5205,9 @@ shape = SubResource("RectangleShape2D_g630t")
 [node name="Bad Slime" parent="." unique_id=1099784084 instance=ExtResource("12_vdvy6")]
 position = Vector2(336, 48)
 end_position_right = 464.0
+
+[node name="Coin Collectable" parent="." unique_id=2146743414 instance=ExtResource("12_07d4o")]
+position = Vector2(49, 14)
+
+[node name="Coin Collectable2" parent="." unique_id=1371815978 instance=ExtResource("12_07d4o")]
+position = Vector2(49, -111)
