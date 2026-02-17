@@ -13,28 +13,30 @@ size = Vector2(7.70713, 0.795996)
 [sub_resource type="CircleShape2D" id="CircleShape2D_kkpwa"]
 radius = 7.07107
 
-[node name="WaterDrop" type="RigidBody2D"]
+[node name="WaterDrop" type="RigidBody2D" unique_id=559343759]
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_kkpwa")
 gravity_scale = 0.38
 script = ExtResource("1_6p86p")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=334115377]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_eeq30")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1271155360]
 position = Vector2(0, 3)
 scale = Vector2(1.038, 10.0503)
 shape = SubResource("RectangleShape2D_i4db6")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=2130863589]
+collision_layer = 8
+collision_mask = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1981403631]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_kkpwa")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1112116120]
 wait_time = 2.0
 one_shot = true
 autostart = true

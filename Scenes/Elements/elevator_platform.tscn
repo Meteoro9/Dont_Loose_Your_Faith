@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87khy"]
 size = Vector2(64, 24)
 
-[node name="Elevator Platform" type="StaticBody2D" unique_id=1907244711]
+[node name="Elevator Platform" type="AnimatableBody2D" unique_id=584892596]
+collision_mask = 7
+sync_to_physics = false
 script = ExtResource("1_87khy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949995251]

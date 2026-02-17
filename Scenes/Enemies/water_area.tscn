@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3i70u2s72jdx"]
+[gd_scene format=3 uid="uid://b3i70u2s72jdx"]
 
 [ext_resource type="Script" uid="uid://cw574n66mn4c5" path="res://Scripts/Enemies/water_area.gd" id="1_1mmq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p35db"]
 
-[node name="WaterArea" type="Area2D"]
+[node name="WaterArea" type="Area2D" unique_id=1906685142]
 scale = Vector2(3, 3)
+collision_layer = 8
+collision_mask = 6
 script = ExtResource("1_1mmq0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974341321]
 shape = SubResource("RectangleShape2D_p35db")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

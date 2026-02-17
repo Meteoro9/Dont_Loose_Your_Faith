@@ -3,16 +3,19 @@ class_name BadSlime
 
 enum State { ATTACKING, MOVING, FOLLOWING }
 
+const SlimeEntity = preload("res://Scenes/Enemies/slime_trail.tscn")
 const JUMP_VELOCITY = -400.0
 var _current_state : State = State.MOVING
 var damage := 4.0
-var speed := 500.0
+var speed := 800.0
+@export var trail_interval := 0.15 # Intervalo de depósito de moco
 @export var end_position_right : float
 var init_position_left : float
 var yendo := true
 var alive := true
 var is_player_in_hitbox := false
 var player : CandlePlayer
+var _trail_timer := 0.0
 
 #region COMPORTAMIENTOS
 func _ready() -> void:
@@ -21,10 +24,20 @@ func _ready() -> void:
 	$AnimatedSprite2D.frame_changed.connect(_on_attack_started)
 
 func _process(delta: float) -> void:
+	_trail_timer += delta
+	if _trail_timer >= trail_interval:
+		_trail_timer = 0.0
+		_spawn_trail()
+	
 	if not is_on_floor(): velocity += get_gravity() * delta # Activamos gravedad
 	
 	_play_animation_and_motion(delta)
 	move_and_slide()
+
+func _spawn_trail():
+	var trail = SlimeEntity.instantiate()
+	get_parent().add_child(trail)
+	trail.global_position = global_position
 
 func _play_animation_and_motion(_delta):
 	await $AnimatedSprite2D.animation_finished

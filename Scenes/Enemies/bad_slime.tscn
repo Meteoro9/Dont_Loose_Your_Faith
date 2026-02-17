@@ -78,6 +78,8 @@ size = Vector2(14, 4)
 size = Vector2(38, 21)
 
 [node name="Bad Slime" type="CharacterBody2D" unique_id=1099784084]
+collision_layer = 8
+collision_mask = 7
 script = ExtResource("1_uy2fn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=914350580]
@@ -92,6 +94,8 @@ scale = Vector2(1.9161083, 1.4631963)
 shape = SubResource("RectangleShape2D_s26cc")
 
 [node name="AreaFollow" type="Area2D" parent="." unique_id=219240377]
+collision_layer = 8
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFollow" unique_id=1294206639]
 position = Vector2(0, -76.5)
@@ -99,6 +103,8 @@ shape = SubResource("RectangleShape2D_7le8g")
 debug_color = Color(0, 0.6446857, 0.28214455, 0.41960785)
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=15790620]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=2040903113]
 position = Vector2(0, -7)
@@ -106,6 +112,8 @@ shape = SubResource("RectangleShape2D_uy2fn")
 debug_color = Color(0.97855586, 0.078154676, 0.32136402, 0.41960785)
 
 [node name="HitBox" type="Area2D" parent="." unique_id=414230857]
+collision_layer = 0
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1350141831]
 position = Vector2(0, 8.5)

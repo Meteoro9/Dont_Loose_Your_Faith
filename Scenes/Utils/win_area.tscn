@@ -8,6 +8,7 @@
 
 [node name="WinArea" type="Area2D" unique_id=1272530565]
 position = Vector2(-4, 0)
+collision_mask = 2
 script = ExtResource("1_sobkd")
 win_scene = ExtResource("2_osqyv")
 loose_scene = ExtResource("3_ss5hm")

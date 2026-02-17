@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bqmlk6xtsc7ak"]
+[gd_scene format=3 uid="uid://bqmlk6xtsc7ak"]
 
 [ext_resource type="Script" uid="uid://chf26dde88306" path="res://Scripts/Enemies/wind_area.gd" id="1_gt5j3"]
 [ext_resource type="Texture2D" uid="uid://e3cwb1w1ckij" path="res://Assets/Wind/Free Smoke Fx  Pixel 07.png" id="2_gt5j3"]
@@ -98,15 +98,17 @@ animations = [{
 "speed": 18.0
 }]
 
-[node name="WindArea" type="Area2D"]
+[node name="WindArea" type="Area2D" unique_id=622584450]
 scale = Vector2(1.25, 1.25)
+collision_layer = 8
+collision_mask = 6
 script = ExtResource("1_gt5j3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1271865730]
 position = Vector2(-0.1, 0)
 shape = SubResource("RectangleShape2D_gt5j3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434309469]
 sprite_frames = SubResource("SpriteFrames_j4v8c")
 autoplay = "default"
 frame_progress = 0.802209

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
 [ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
-[ext_resource type="Script" uid="uid://1ajmaisv5g72" path="res://Scripts/Player/jump_area.gd" id="3_85dko"]
 [ext_resource type="Script" uid="uid://dpscdhtb7w28j" path="res://Scripts/Player/candle_animations.gd" id="4_5vcen"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="4_ohdre"]
 [ext_resource type="Texture2D" uid="uid://bmi5e6nspbxt3" path="res://Assets/Darkness.png" id="5_5vcen"]
@@ -13,9 +12,6 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
 radius = 4.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1jqv"]
-size = Vector2(10, 3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k754a"]
 radius = 4.63822
@@ -259,6 +255,8 @@ _data = {
 
 [node name="Candle-Player" type="CharacterBody2D" unique_id=31092358 node_paths=PackedStringArray("fire_animation") groups=["player"]]
 scale = Vector2(1.96, 1.96)
+collision_layer = 2
+collision_mask = 57
 script = ExtResource("1_p1jqv")
 fire_animation = NodePath("FireArea")
 
@@ -271,17 +269,11 @@ texture = ExtResource("2_5vcen")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425528358]
 shape = SubResource("CapsuleShape2D_p1jqv")
 
-[node name="Jump-Area" type="Area2D" parent="." unique_id=2060432537]
-script = ExtResource("3_85dko")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jump-Area" unique_id=727389755]
-position = Vector2(0, 14.5)
-shape = SubResource("RectangleShape2D_p1jqv")
-debug_color = Color(0.614125, 0.531184, 0.228713, 0.42)
-
 [node name="FireArea" type="Area2D" parent="." unique_id=201426561 node_paths=PackedStringArray("bar", "fire_animation")]
 position = Vector2(0, -22)
 scale = Vector2(0.55, 0.55)
+collision_layer = 4
+collision_mask = 40
 script = ExtResource("6_fldxn")
 bar = NodePath("../CanvasLayer/ProgressBar")
 fire_animation = NodePath("../FireAnimation")
@@ -343,7 +335,5 @@ animated_sprite = NodePath("../FireAnimation")
 candle = NodePath("..")
 fire = NodePath("../FireArea")
 
-[connection signal="body_entered" from="Jump-Area" to="Jump-Area" method="_on_body_entered"]
-[connection signal="body_exited" from="Jump-Area" to="Jump-Area" method="_on_body_exited"]
 [connection signal="finished" from="FireArea/FlameAlive" to="FireArea" method="_on_flame_alive_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

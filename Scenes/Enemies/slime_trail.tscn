@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://csmmvovlcqh7e"]
+
+[ext_resource type="Script" uid="uid://b8e3mf8f587mp" path="res://Scripts/Enemies/slime_trail.gd" id="1_gum6l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8aou"]
+size = Vector2(11, 5.5)
+
+[sub_resource type="Gradient" id="Gradient_kdo6m"]
+colors = PackedColorArray(0.5137255, 1, 0.1764706, 1, 0.5137255, 1, 0.1764706, 0.13725491)
+
+[node name="Slime Trail" type="Area2D" unique_id=1415573511]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_gum6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1797352597]
+shape = SubResource("RectangleShape2D_l8aou")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1395271320]
+amount = 5
+lifetime = 0.52
+emission_shape = 1
+emission_sphere_radius = 10.0
+spread = 180.0
+gravity = Vector2(0, 50)
+initial_velocity_min = 6.62
+initial_velocity_max = 13.25
+color = Color(0.5137255, 1, 0.1764706, 1)
+color_ramp = SubResource("Gradient_kdo6m")
