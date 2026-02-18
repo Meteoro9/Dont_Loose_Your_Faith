@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ciolphkcn5cwq"]
+
+[ext_resource type="Script" uid="uid://c6f1i3ny11hj6" path="res://Scripts/Utils/level_summary_menu.gd" id="1_6amn5"]
+
+[node name="Level-Info" type="Node" unique_id=1909714594]
+script = ExtResource("1_6amn5")

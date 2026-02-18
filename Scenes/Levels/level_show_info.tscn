@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bk1n0jj4xvseh"]
 
+[ext_resource type="Script" uid="uid://d1r7uhck8u3hv" path="res://Scripts/Utils/level_menu_show_info.gd" id="1_mxh80"]
 [ext_resource type="Texture2D" uid="uid://dce26gkgk1opk" path="res://Assets/play-button.png" id="1_xa7wv"]
 [ext_resource type="Texture2D" uid="uid://gls1n4nxm3wh" path="res://Assets/play-button-inverted.png" id="2_mxh80"]
+[ext_resource type="PackedScene" uid="uid://ciolphkcn5cwq" path="res://Scenes/Levels/level_summary_menu.tscn" id="4_oxtd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa7wv"]
 bg_color = Color(0.22352941, 0.22352941, 0.22352941, 0.7254902)
@@ -312,13 +314,19 @@ _data = {
 &"default": SubResource("Animation_mxh80")
 }
 
-[node name="Level Show Info" type="Control" unique_id=443533315]
+[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mxh80")
+times_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelTimesRecord")
+day_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelDayRecord")
+hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelHourRecord")
+stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
+level_info_array_ordered = [NodePath("Level-Info")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]
 
@@ -394,64 +402,24 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "TIMES-LOG
-*30.30
-*
-*
-*
-*
-*
-*
-*
-*"
 vertical_alignment = 1
 
 [node name="LabelDayRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=1039944936]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "DAY-LOG
-*2020/30/30
-*
-*
-*
-*
-*
-*
-*
-*"
 vertical_alignment = 1
 
 [node name="LabelHourRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=934767222]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "HOUR-LOG
-*30:30
-*
-*
-*
-*
-*
-*
-*
-*"
 vertical_alignment = 1
 
 [node name="LabelStarsRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=222950057]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "STARS-LOG
-*3/5
-*
-*
-*
-*
-*
-*
-*
-*"
 vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=2023786795]
@@ -493,3 +461,10 @@ offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "MAIN-MENU"
+
+[node name="Level-Info" parent="." unique_id=1909714594 instance=ExtResource("4_oxtd6")]
+level_path = "res://Scenes/Levels/sample_level.tscn"
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonNext" to="." method="_on_button_next_pressed"]
