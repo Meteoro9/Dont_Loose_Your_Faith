@@ -1,0 +1,62 @@
+[gd_resource type="Theme" format=3 uid="uid://dc1cc6r6c43sd"]
+
+[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="1_a8t4o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vk5m"]
+bg_color = Color(0.18000486, 0.1800049, 0.18000478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h271"]
+content_margin_left = 15.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 5.0
+bg_color = Color(0.2617191, 0.26171917, 0.26171908, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0p66"]
+content_margin_left = 15.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_203vc"]
+content_margin_left = 15.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 5.0
+bg_color = Color(0.3753984, 0.3753986, 0.37539843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8t4o"]
+corner_radius_top_left = 30
+corner_radius_top_right = 10
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 10
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/icon_max_width = 40
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_a8t4o")
+Button/styles/disabled = SubResource("StyleBoxFlat_8vk5m")
+Button/styles/hover = SubResource("StyleBoxFlat_8h271")
+Button/styles/normal = SubResource("StyleBoxFlat_b0p66")
+Button/styles/pressed = SubResource("StyleBoxFlat_203vc")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_a8t4o")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_a8t4o")

@@ -37,6 +37,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Desafío-7-Definitivo-2"
 
+[gui]
+
+theme/custom="uid://dc1cc6r6c43sd"
+
 [input]
 
 arriba={
