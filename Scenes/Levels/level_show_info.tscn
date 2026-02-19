@@ -158,6 +158,118 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/HBoxContainer:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/HBoxContainer:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ButtonPrevMenu:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/HBoxContainer:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oxtd6"]
+resource_name = "appear"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/HBoxContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ButtonPrevMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonPrevMenu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.033038426),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/HBoxContainer:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mxh80"]
 resource_name = "default"
@@ -308,13 +420,84 @@ tracks/11/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.6431373), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6431373), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6431373), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6431373), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6431373), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_hwnxc"]
+resource_name = "desappear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/HBoxContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ButtonPrevMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonPrevMenu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ptfpb"]
+resource_name = "init"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HBoxContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oxtd6"]
 _data = {
 &"RESET": SubResource("Animation_xa7wv"),
-&"default": SubResource("Animation_mxh80")
+&"appear": SubResource("Animation_oxtd6"),
+&"default": SubResource("Animation_mxh80"),
+&"desappear": SubResource("Animation_hwnxc"),
+&"init": SubResource("Animation_ptfpb")
 }
 
-[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered", "h_box_container")]
+[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered", "h_box_container", "animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -328,6 +511,7 @@ hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCon
 stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
 level_info_array_ordered = [NodePath("Level-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
+animation = NodePath("AnimationPlayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]
 
@@ -338,18 +522,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -354.0
-offset_top = -100.5
+offset_top = -72.5
 offset_right = 354.0
-offset_bottom = 44.5
+offset_bottom = 72.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HBoxContainer" unique_id=340374932]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_xa7wv")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer/PanelContainer" unique_id=800965639]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
@@ -357,6 +545,7 @@ theme_override_constants/margin_bottom = 15
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer" unique_id=1266532429]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 15
 
@@ -445,7 +634,7 @@ icon = ExtResource("1_xa7wv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1504910016]
 libraries/ = SubResource("AnimationLibrary_oxtd6")
-autoplay = &"default"
+autoplay = &"init"
 
 [node name="ButtonPrevMenu" type="Button" parent="." unique_id=917229072]
 layout_mode = 1

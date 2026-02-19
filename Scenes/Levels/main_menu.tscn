@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c41ukoec7vqmq" path="res://Assets/logo editado.png" id="1_qqk0j"]
 [ext_resource type="Script" uid="uid://buduawctj7juf" path="res://Scripts/Utils/main_menu.gd" id="1_vytfc"]
 [ext_resource type="VideoStream" uid="uid://hf2t57flg264" path="res://Assets/GIFS/sea03.ogv" id="3_t475i"]
+[ext_resource type="PackedScene" uid="uid://bk1n0jj4xvseh" path="res://Scenes/Levels/level_show_info.tscn" id="3_xg7my"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vytfc"]
 bg_color = Color(1, 1, 1, 1)
@@ -30,6 +31,239 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
 shadow_size = 5
 
+[sub_resource type="Animation" id="Animation_xg7my"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wmo1h"]
+resource_name = "hide_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_gnv55"]
+resource_name = "show_menu"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0056407065),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0056407065),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0056407065),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b7svq"]
+_data = {
+&"RESET": SubResource("Animation_xg7my"),
+&"hide_menu": SubResource("Animation_wmo1h"),
+&"show_menu": SubResource("Animation_gnv55")
+}
+
 [node name="MainMenu" type="Control" unique_id=466916617]
 layout_mode = 3
 anchors_preset = 15
@@ -52,84 +286,6 @@ grow_horizontal = 0
 scale = Vector2(10.1617, 10.1617)
 texture = ExtResource("1_qqk0j")
 expand_mode = 1
-
-[node name="LabelTimes" type="Label" parent="." unique_id=1774430224]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 36.0
-offset_right = 359.0
-offset_bottom = -488.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "TIMES"
-vertical_alignment = 1
-
-[node name="LabelTimesRecord" type="Label" parent="." unique_id=1766922494]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 36.0
-offset_top = 106.0
-offset_right = 359.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "TIMES-LOG"
-vertical_alignment = 1
-
-[node name="LabelDay" type="Label" parent="." unique_id=1314790330]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 348.0
-offset_right = 671.0
-offset_bottom = -488.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "DAY"
-vertical_alignment = 1
-
-[node name="LabelDayRecord" type="Label" parent="." unique_id=1659871211]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 348.0
-offset_top = 106.0
-offset_right = 671.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "DAY-LOG"
-vertical_alignment = 1
-
-[node name="LabelHour" type="Label" parent="." unique_id=545510680]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 545.0
-offset_right = 868.0
-offset_bottom = -488.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "HOUR"
-vertical_alignment = 1
-
-[node name="LabelHourRecord" type="Label" parent="." unique_id=2008669838]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 545.0
-offset_top = 106.0
-offset_right = 868.0
-grow_vertical = 2
-theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
-text = "HOUR-LOG"
-vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=2094343631]
 z_index = 2
@@ -178,6 +334,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vytfc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qqk0j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
 text = "LANGUAGE"
+
+[node name="Level Show Info" parent="." unique_id=443533315 instance=ExtResource("3_xg7my")]
+layout_mode = 1
 
 [node name="Node" type="Node" parent="." unique_id=556889127]
 
@@ -446,6 +605,89 @@ mouse_filter = 2
 stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
+
+[node name="OldLabels" type="Node" parent="." unique_id=1372811638]
+
+[node name="LabelTimes" type="Label" parent="OldLabels" unique_id=1774430224]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_right = 359.0
+offset_bottom = -488.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "TIMES"
+vertical_alignment = 1
+
+[node name="LabelTimesRecord" type="Label" parent="OldLabels" unique_id=1766922494]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 106.0
+offset_right = 359.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "TIMES-LOG"
+vertical_alignment = 1
+
+[node name="LabelDay" type="Label" parent="OldLabels" unique_id=1314790330]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 348.0
+offset_right = 671.0
+offset_bottom = -488.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "DAY"
+vertical_alignment = 1
+
+[node name="LabelDayRecord" type="Label" parent="OldLabels" unique_id=1659871211]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 348.0
+offset_top = 106.0
+offset_right = 671.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "DAY-LOG"
+vertical_alignment = 1
+
+[node name="LabelHour" type="Label" parent="OldLabels" unique_id=545510680]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 545.0
+offset_right = 868.0
+offset_bottom = -488.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "HOUR"
+vertical_alignment = 1
+
+[node name="LabelHourRecord" type="Label" parent="OldLabels" unique_id=2008669838]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 545.0
+offset_top = 106.0
+offset_right = 868.0
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 32
+text = "HOUR-LOG"
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=970050374]
+libraries/ = SubResource("AnimationLibrary_b7svq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="button_up" from="Button2" to="." method="on_language_pressed"]
