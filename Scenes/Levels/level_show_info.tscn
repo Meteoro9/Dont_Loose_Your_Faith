@@ -314,7 +314,7 @@ _data = {
 &"default": SubResource("Animation_mxh80")
 }
 
-[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered")]
+[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered", "h_box_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -327,6 +327,7 @@ day_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCont
 hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelHourRecord")
 stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
 level_info_array_ordered = [NodePath("Level-Info")]
+h_box_container = NodePath("CanvasLayer/HBoxContainer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]
 
@@ -336,13 +337,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -413.0
-offset_top = -257.5
-offset_right = 413.0
-offset_bottom = 189.5
+offset_left = -354.0
+offset_top = -100.5
+offset_right = 354.0
+offset_bottom = 44.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HBoxContainer" unique_id=340374932]
 layout_mode = 2
@@ -468,3 +468,4 @@ level_path = "res://Scenes/Levels/sample_level.tscn"
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonNext" to="." method="_on_button_next_pressed"]
+[connection signal="pressed" from="ButtonPrevMenu" to="." method="_on_button_prev_menu_pressed"]
