@@ -27,6 +27,7 @@ func on_language_pressed():
 	# Cambiamos al siguiente en la lista
 	var next_index = (current_index + 1) % languages.size()
 	change_language(languages[next_index])
+	level_info.show_info(level_info.level_info_array_ordered[level_info.current_level_index])
 
 
 func change_language(lang: String) -> void:

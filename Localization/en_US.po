@@ -1,14 +1,15 @@
-# LANGUAGE translation for Desafío-7-Definitivo-2 for the following files:
+# LANGUAGE translation for Don't Loose Your Faith for the following files:
 # res://Scenes/Levels/main_menu.tscn
 # res://Scenes/Levels/loose_menu.tscn
 # res://Scenes/Levels/win_menu.tscn
+# res://Scenes/Levels/level_show_info.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Desafío-7-Definitivo-2\n"
+"Project-Id-Version: Don't Loose Your Faith\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
@@ -19,37 +20,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: Scenes/Levels/main_menu.tscn
-msgid "TIMES"
-msgstr "Your records"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "DAY"
-msgstr "Date"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "HOUR"
-msgstr "Hour"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "TIMES-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
-msgid "DAY-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
-msgid "HOUR-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "PLAY"
 msgstr "Play"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
 msgstr "Language : English"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "TIMES"
+msgstr "Your records"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "DAY"
+msgstr "Date"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "HOUR"
+msgstr "Hour"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY\n"
@@ -59,5 +48,21 @@ msgstr "Retry\n"
 msgid "MENU\n"
 msgstr "Go to menu\n"
 
-msgid "Desafío-7-Definitivo-2"
+#: Scenes/Levels/level_show_info.tscn
+msgid "STARS"
+msgstr "Stars"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "LEVEL-TITLE"
+msgstr "Level %d"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "MAIN-MENU"
+msgstr "Return"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(No records registered yet)"
+
+msgid "Don't Loose Your Faith"
 msgstr "Don't Loose Your Faith"

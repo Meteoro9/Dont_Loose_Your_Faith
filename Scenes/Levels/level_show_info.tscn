@@ -497,7 +497,7 @@ _data = {
 &"init": SubResource("Animation_ptfpb")
 }
 
-[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_info_array_ordered", "h_box_container", "animation")]
+[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_index_label", "level_info_array_ordered", "h_box_container", "animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -509,6 +509,7 @@ times_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCo
 day_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelDayRecord")
 hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelHourRecord")
 stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
+level_index_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/LevelID")
 level_info_array_ordered = [NodePath("Level-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
@@ -618,7 +619,7 @@ alignment = 1
 
 [node name="LevelID" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=889409276]
 layout_mode = 2
-text = "LEVEL-ID"
+text = "LEVEL-TITLE"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1

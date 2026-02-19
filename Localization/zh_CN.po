@@ -1,14 +1,15 @@
-# LANGUAGE translation for Desafío-7-Definitivo-2 for the following files:
+# LANGUAGE translation for Don't Loose Your Faith for the following files:
 # res://Scenes/Levels/main_menu.tscn
 # res://Scenes/Levels/loose_menu.tscn
 # res://Scenes/Levels/win_menu.tscn
+# res://Scenes/Levels/level_show_info.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Desafío-7-Definitivo-2\n"
+"Project-Id-Version: Don't Loose Your Faith\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
@@ -19,37 +20,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: Scenes/Levels/main_menu.tscn
-msgid "TIMES"
-msgstr "你的时间"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "DAY"
-msgstr "日期"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "HOUR"
-msgstr "时间"
-
-#: Scenes/Levels/main_menu.tscn
-msgid "TIMES-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
-msgid "DAY-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
-msgid "HOUR-LOG"
-msgstr ""
-
-#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "PLAY"
 msgstr "开始游戏"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
 msgstr "语言：中文"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "TIMES"
+msgstr "你的时间"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "DAY"
+msgstr "日期"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "HOUR"
+msgstr "时间"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY\n"
@@ -59,5 +48,21 @@ msgstr "重试\n"
 msgid "MENU\n"
 msgstr "返回菜单\n"
 
-msgid "Desafío-7-Definitivo-2"
-msgstr "不要失去信念！"
+#: Scenes/Levels/level_show_info.tscn
+msgid "STARS"
+msgstr "星星"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "LEVEL-TITLE"
+msgstr "第%d关"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "MAIN-MENU"
+msgstr "返回"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "（尚未记录任何时间）"
+
+msgid "Don't Loose Your Faith"
+msgstr "不要失去信念"

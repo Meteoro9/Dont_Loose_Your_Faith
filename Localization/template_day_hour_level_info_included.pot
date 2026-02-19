@@ -1,0 +1,68 @@
+# LANGUAGE translation for Don't Loose Your Faith for the following files:
+# res://Scenes/Levels/main_menu.tscn
+# res://Scenes/Levels/loose_menu.tscn
+# res://Scenes/Levels/win_menu.tscn
+# res://Scenes/Levels/level_show_info.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Don't Loose Your Faith\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/level_show_info.tscn
+msgid "PLAY"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "LANGUAGE"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/level_show_info.tscn
+msgid "TIMES"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/level_show_info.tscn
+msgid "DAY"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+#: Scenes/Levels/level_show_info.tscn
+msgid "HOUR"
+msgstr ""
+
+#: Scenes/Levels/loose_menu.tscn
+#: Scenes/Levels/win_menu.tscn
+msgid "RETRY\n"
+msgstr ""
+
+#: Scenes/Levels/loose_menu.tscn
+#: Scenes/Levels/win_menu.tscn
+msgid "MENU\n"
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "STARS"
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "LEVEL-TITLE"
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "MAIN-MENU"
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr ""
+
+msgid "Don't Loose Your Faith"
+msgstr ""
