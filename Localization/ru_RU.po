@@ -40,13 +40,21 @@ msgstr "Дата"
 msgid "HOUR"
 msgstr "Время"
 
-#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
-msgstr "Повторить\n"
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
+"[/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Не теряй веру![/i][/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
-msgstr "В меню\n"
+msgid "RETRY"
+msgstr "Повторить"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "MENU"
+msgstr "В меню"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"

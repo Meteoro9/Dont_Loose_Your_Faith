@@ -12,7 +12,7 @@ var current_level_index := 0
 @export var h_box_container : HBoxContainer
 @export var animation : AnimationPlayer
 
-var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU"]
+var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU", "gn_PY"]
 var current_lang := "en_US"
 
 func _ready() -> void:
@@ -67,7 +67,6 @@ func _on_button_next_pressed():
 		show_info(level_info_array_ordered[current_level_index])
 		h_box_container.alignment = BoxContainer.ALIGNMENT_CENTER
 		h_box_container.global_position.y = h_box_container.global_position.y -20
-
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0:

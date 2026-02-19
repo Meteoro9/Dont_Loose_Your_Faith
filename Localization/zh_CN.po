@@ -40,13 +40,21 @@ msgstr "日期"
 msgid "HOUR"
 msgstr "时间"
 
-#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
-msgstr "重试\n"
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
+"[/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]不要失去信念！[/i][/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
-msgstr "返回菜单\n"
+msgid "RETRY"
+msgstr "重试"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "MENU"
+msgstr "返回菜单"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"

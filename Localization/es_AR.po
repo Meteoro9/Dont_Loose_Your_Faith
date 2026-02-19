@@ -26,7 +26,7 @@ msgstr "Jugar"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "Lenguaje: Español"
+msgstr "Lenguaje : Español"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
@@ -40,13 +40,21 @@ msgstr "Fecha"
 msgid "HOUR"
 msgstr "Hora"
 
-#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
-msgstr "Reintentar\n"
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
+"[/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]No pierdas la fe![/i][/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
-msgstr "Ir al menú\n"
+msgid "RETRY"
+msgstr "Reintentar"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "MENU"
+msgstr "Ir al menú"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"

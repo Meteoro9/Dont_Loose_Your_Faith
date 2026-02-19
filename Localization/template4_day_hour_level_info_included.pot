@@ -38,14 +38,18 @@ msgstr ""
 msgid "HOUR"
 msgstr ""
 
-#: Scenes/Levels/loose_menu.tscn
-#: Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
+#: Scenes/Levels/main_menu.tscn
+msgid "[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave][/pulse]"
 msgstr ""
 
 #: Scenes/Levels/loose_menu.tscn
 #: Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
+msgid "RETRY"
+msgstr ""
+
+#: Scenes/Levels/loose_menu.tscn
+#: Scenes/Levels/win_menu.tscn
+msgid "MENU"
 msgstr ""
 
 #: Scenes/Levels/level_show_info.tscn

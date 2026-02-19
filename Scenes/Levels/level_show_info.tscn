@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d1r7uhck8u3hv" path="res://Scripts/Utils/level_menu_show_info.gd" id="1_mxh80"]
 [ext_resource type="Texture2D" uid="uid://dce26gkgk1opk" path="res://Assets/play-button.png" id="1_xa7wv"]
 [ext_resource type="Texture2D" uid="uid://gls1n4nxm3wh" path="res://Assets/play-button-inverted.png" id="2_mxh80"]
+[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="3_hwnxc"]
 [ext_resource type="PackedScene" uid="uid://ciolphkcn5cwq" path="res://Scenes/Levels/level_summary_menu.tscn" id="4_oxtd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa7wv"]
@@ -619,6 +620,8 @@ alignment = 1
 
 [node name="LevelID" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=889409276]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_hwnxc")
+bbcode_enabled = true
 text = "LEVEL-TITLE"
 fit_content = true
 scroll_active = false

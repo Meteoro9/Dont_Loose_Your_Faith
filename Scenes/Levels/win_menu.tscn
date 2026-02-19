@@ -114,8 +114,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-text = "RETRY
-"
+text = "RETRY"
 
 [node name="Button2" type="Button" parent="." unique_id=1190618162]
 anchors_preset = 8
@@ -137,8 +136,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-text = "MENU
-"
+text = "MENU"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
 libraries/ = SubResource("AnimationLibrary_rifxn")

@@ -34,19 +34,27 @@ msgstr "Seus tempos"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "DAY"
-msgstr "Dia"
+msgstr ""
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "HOUR"
-msgstr "Hora"
+msgstr "Dia"
+
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
+"[/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Não perca a fé![/i][/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
-msgstr "Tentar novamente\n"
+msgid "RETRY"
+msgstr "Tentar novamente"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
-msgstr "Ir para o menu\n"
+msgid "MENU"
+msgstr "Ir para o menu"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"

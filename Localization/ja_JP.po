@@ -40,13 +40,21 @@ msgstr "日付"
 msgid "HOUR"
 msgstr "時間"
 
-#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "RETRY\n"
-msgstr "リトライ\n"
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
+"[/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]信念を失うな！[/i][/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
-msgid "MENU\n"
-msgstr "メニューに戻る\n"
+msgid "RETRY"
+msgstr "リトライ"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "MENU"
+msgstr "メニューに戻る"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"

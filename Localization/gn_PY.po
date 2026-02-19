@@ -14,7 +14,7 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: gn_PY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,55 +22,55 @@ msgstr ""
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "PLAY"
-msgstr "Play"
+msgstr "Ñembosarái"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "Language : English"
+msgstr "Ñe’ẽ: Avañe’ẽ"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
-msgstr "Your records"
+msgstr "Nde aravo kuéra"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "DAY"
-msgstr "Date"
+msgstr "Ára"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "HOUR"
-msgstr "Hour"
+msgstr "Aravo"
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
-"[/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
+"[/wave][/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Don't Loose Your Faith![/i][/"
-"title-effect][/wave][/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Ani rehejarei nde jerovia![/"
+"i][/title-effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
-msgstr "Retry"
+msgstr "Eha’ã jey"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "MENU"
-msgstr "Go to menu"
+msgstr "Eho menú-pe"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
-msgstr "Stars"
+msgstr "Mbyja kuéra"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "LEVEL-TITLE"
-msgstr "[wave]Level %d[/wave]"
+msgstr "Nivel %d"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "MAIN-MENU"
-msgstr "Return"
+msgstr "Ejevy"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "NO-RECORDS"
-msgstr "(No records registered yet)"
+msgstr "(Ndaipóri gueteri aravo ojehai va’ekue)"
 
 msgid "Don't Loose Your Faith"
-msgstr "Don't Loose Your Faith"
+msgstr "Ani rehejarei nde jerovia"

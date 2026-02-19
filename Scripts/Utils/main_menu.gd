@@ -4,7 +4,7 @@ class_name MainMenu
 @onready var level_info = $"Level Show Info"
 @onready var animation = $AnimationPlayer
 
-var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU"]
+var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU", "gn_PY"]
 var current_lang := "en_US"
 
 func _ready() -> void:
