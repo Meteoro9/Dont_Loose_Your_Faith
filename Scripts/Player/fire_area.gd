@@ -13,6 +13,8 @@ var is_alive := true # Para evitar loopear método kill()
 @onready var kill_audio = $FlameKill
 @onready var candle = get_parent()
 
+signal fire_killed
+
 func take_damage(amount : float):
 	if not candle.won:
 		if current_flame - amount <= 0:
@@ -30,6 +32,8 @@ func kill():
 		alive_audio.stop() # Apagamos el sonido de fuego vivo
 		kill_audio.play() # Reproducimos sonido de muerte
 		is_alive = false
+		
+		fire_killed.emit()
 		
 		GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
 		var scene = loose_menu.instantiate()
