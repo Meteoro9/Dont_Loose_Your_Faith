@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	if not won:
 		# Handle jump.
-		if Input.is_action_just_pressed("arriba") and is_on_floor():
+		if Input.is_action_just_pressed("arriba") and is_on_floor() and not _in_slime:
 			velocity.y = JUMP_VELOCITY
 		
 		# Get the input direction and handle the movement/deceleration.
@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 			fire_animation.take_damage(1.5)
 			if fire_animation.current_flame <= 0:
 				fire_animation.kill()
+			#endregion
 			#region Aply States
 			# Esta sentencia es una locura!!!
 			var friction = _slime_friction if _in_slime else _normal_friction
@@ -38,6 +39,7 @@ func _physics_process(delta: float) -> void:
 			var stop_friction = _slime_friction if _in_slime else 1.0
 			velocity.x = lerp(velocity.x, 0.0, stop_friction)
 			#velocity.x = move_toward(velocity.x, 0, SPEED) # Código original
+			#endregion
 	
 	move_and_slide()
 
@@ -58,3 +60,4 @@ func aply_slime_effect(trail: SlimeTrail) -> void:
 
 func remove_slime_effect(trail: SlimeTrail) -> void:
 	_active_slime_trails.erase(trail)
+#endregion
