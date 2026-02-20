@@ -4,6 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="2_6jb3d"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="3_njam7"]
 [ext_resource type="PackedScene" uid="uid://c5su7wlh4nf2x" path="res://Scenes/Collectables/coin_collectable.tscn" id="4_tpbjv"]
+[ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="5_128d2"]
+[ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="6_1qg2w"]
+[ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="7_1qg2w"]
+[ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="8_2x5tp"]
+[ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="9_6a11a"]
 
 [sub_resource type="GDScript" id="GDScript_f6o4v"]
 resource_name = "Level 1"
@@ -123,3 +128,26 @@ level_id = 1
 position = Vector2(267, -979)
 coin_material = 2
 level_id = 1
+
+[node name="ShowTimer" parent="." unique_id=915160596 instance=ExtResource("7_1qg2w")]
+
+[node name="Candle-Player" parent="." unique_id=31092358 instance=ExtResource("5_128d2")]
+position = Vector2(16, -32.000008)
+
+[node name="WinArea" parent="." unique_id=1272530565 node_paths=PackedStringArray("show_timer") instance=ExtResource("6_1qg2w")]
+position = Vector2(38, -1145)
+is_win = true
+show_timer = NodePath("../ShowTimer")
+level_id = 1
+
+[node name="LooseArea" parent="." unique_id=350291316 node_paths=PackedStringArray("show_timer") instance=ExtResource("6_1qg2w")]
+position = Vector2(132, 174)
+show_timer = NodePath("../ShowTimer")
+level_id = 1
+
+[node name="Parallax2" parent="." unique_id=1577933539 instance=ExtResource("8_2x5tp")]
+position = Vector2(42, -33)
+
+[node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("9_6a11a")]
+position = Vector2(12, 18)
+player = NodePath("../Candle-Player")
