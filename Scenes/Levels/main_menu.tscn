@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://buduawctj7juf" path="res://Scripts/Utils/main_menu.gd" id="1_vytfc"]
 [ext_resource type="Theme" uid="uid://dc1cc6r6c43sd" path="res://Themes & Materials/Theme/personalized_theme.tres" id="2_gnv55"]
+[ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="3_b7svq"]
 [ext_resource type="VideoStream" uid="uid://hf2t57flg264" path="res://Assets/GIFS/sea03.ogv" id="3_t475i"]
 [ext_resource type="PackedScene" uid="uid://bk1n0jj4xvseh" path="res://Scenes/Levels/level_show_info.tscn" id="3_xg7my"]
 [ext_resource type="PackedScene" uid="uid://dpnemmdmxf2a3" path="res://Scenes/Decoration/candle_menu.tscn" id="5_wmo1h"]
@@ -105,6 +106,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(5, 5)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background Animated:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.09877711, 0.6643007, 0.68718815, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_wmo1h"]
 resource_name = "hide_menu"
@@ -203,6 +216,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(5, 5), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background Animated:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.77),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.09803922, 0.6627451, 0.6862745, 1), Color(0.5647059, 0.5176471, 0.92156863, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_gnv55"]
@@ -304,6 +329,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(5, 5)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background Animated:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.5648365, 0.51874244, 0.9208838, 1), Color(0.09803922, 0.6627451, 0.6862745, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b7svq"]
 _data = {
@@ -343,6 +380,10 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "PLAY"
 
+[node name="ButtonEffectsModule" type="Node" parent="Button" unique_id=720458816]
+script = ExtResource("3_b7svq")
+metadata/_custom_type_script = "uid://dadsukldygahu"
+
 [node name="Button2" type="Button" parent="." unique_id=530460084]
 z_index = 2
 layout_mode = 1
@@ -360,16 +401,20 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "LANGUAGE"
 
+[node name="ButtonEffectsModule" type="Node" parent="Button2" unique_id=1728946394]
+script = ExtResource("3_b7svq")
+metadata/_custom_type_script = "uid://dadsukldygahu"
+
 [node name="Level Show Info" parent="." unique_id=443533315 instance=ExtResource("3_xg7my")]
 layout_mode = 1
 
 [node name="Background Animated" type="Control" parent="." unique_id=230777307]
+modulate = Color(0.09877711, 0.6643007, 0.68718815, 1)
 anchors_preset = 0
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="Video" type="VideoStreamPlayer" parent="Background Animated" unique_id=2107253081]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -384,7 +429,6 @@ autoplay = true
 loop = true
 
 [node name="Video2" type="VideoStreamPlayer" parent="Background Animated" unique_id=302371918]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -399,7 +443,6 @@ autoplay = true
 loop = true
 
 [node name="Video3" type="VideoStreamPlayer" parent="Background Animated" unique_id=948264958]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -414,7 +457,6 @@ autoplay = true
 loop = true
 
 [node name="Video4" type="VideoStreamPlayer" parent="Background Animated" unique_id=149110937]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -429,7 +471,6 @@ autoplay = true
 loop = true
 
 [node name="Video5" type="VideoStreamPlayer" parent="Background Animated" unique_id=1826876530]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -444,7 +485,6 @@ autoplay = true
 loop = true
 
 [node name="Video6" type="VideoStreamPlayer" parent="Background Animated" unique_id=1768132766]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -459,7 +499,6 @@ autoplay = true
 loop = true
 
 [node name="Video7" type="VideoStreamPlayer" parent="Background Animated" unique_id=1678845339]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -474,7 +513,6 @@ autoplay = true
 loop = true
 
 [node name="Video8" type="VideoStreamPlayer" parent="Background Animated" unique_id=2141240117]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -489,7 +527,6 @@ autoplay = true
 loop = true
 
 [node name="Video9" type="VideoStreamPlayer" parent="Background Animated" unique_id=1407802046]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -504,7 +541,6 @@ autoplay = true
 loop = true
 
 [node name="Video10" type="VideoStreamPlayer" parent="Background Animated" unique_id=838714691]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -519,7 +555,6 @@ autoplay = true
 loop = true
 
 [node name="Video11" type="VideoStreamPlayer" parent="Background Animated" unique_id=354144215]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -534,7 +569,6 @@ autoplay = true
 loop = true
 
 [node name="Video12" type="VideoStreamPlayer" parent="Background Animated" unique_id=334584083]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -549,7 +583,6 @@ autoplay = true
 loop = true
 
 [node name="Video13" type="VideoStreamPlayer" parent="Background Animated" unique_id=1917553412]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -564,7 +597,6 @@ autoplay = true
 loop = true
 
 [node name="Video14" type="VideoStreamPlayer" parent="Background Animated" unique_id=483256174]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -579,7 +611,6 @@ autoplay = true
 loop = true
 
 [node name="Video15" type="VideoStreamPlayer" parent="Background Animated" unique_id=229103615]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -594,7 +625,6 @@ autoplay = true
 loop = true
 
 [node name="Video16" type="VideoStreamPlayer" parent="Background Animated" unique_id=1035792181]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -609,7 +639,6 @@ autoplay = true
 loop = true
 
 [node name="Video17" type="VideoStreamPlayer" parent="Background Animated" unique_id=374386623]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -624,7 +653,6 @@ autoplay = true
 loop = true
 
 [node name="Video18" type="VideoStreamPlayer" parent="Background Animated" unique_id=1004289106]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0
@@ -639,7 +667,6 @@ autoplay = true
 loop = true
 
 [node name="Video19" type="VideoStreamPlayer" parent="Background Animated" unique_id=2139235776]
-modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 layout_mode = 0

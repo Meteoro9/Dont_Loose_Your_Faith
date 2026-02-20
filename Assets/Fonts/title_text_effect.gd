@@ -5,11 +5,11 @@ class_name TitleTextEffect
 var bbcode = "title-effect"
 
 const FIRE_COLORS = [
-	Color(0.8, 0.1, 0.0),  
+	Color("cc1a00ff"),  
 	Color("ff2900ff"),
 	Color("ff4d00ff"),  
-	Color(1.0, 0.6, 0.0),   
-	Color(1.0, 0.706, 0.0, 1.0),  
+	Color("ff9900ff"),   
+	Color("ffb400ff"),  
 ]
 
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:

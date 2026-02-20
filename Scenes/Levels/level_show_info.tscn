@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dce26gkgk1opk" path="res://Assets/play-button.png" id="1_xa7wv"]
 [ext_resource type="Texture2D" uid="uid://gls1n4nxm3wh" path="res://Assets/play-button-inverted.png" id="2_mxh80"]
 [ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="3_hwnxc"]
+[ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="3_ptfpb"]
 [ext_resource type="PackedScene" uid="uid://ciolphkcn5cwq" path="res://Scenes/Levels/level_summary_menu.tscn" id="4_oxtd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa7wv"]
@@ -633,6 +634,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "PLAY"
 
+[node name="ButtonEffectsModule" type="Node" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" unique_id=1248114326]
+script = ExtResource("3_ptfpb")
+metadata/_custom_type_script = "uid://dadsukldygahu"
+
 [node name="ButtonNext" type="Button" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=716596088]
 layout_mode = 2
 icon = ExtResource("1_xa7wv")
@@ -655,6 +660,10 @@ offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "MAIN-MENU"
+
+[node name="ButtonEffectsModule" type="Node" parent="ButtonPrevMenu" unique_id=1427788437]
+script = ExtResource("3_ptfpb")
+metadata/_custom_type_script = "uid://dadsukldygahu"
 
 [node name="Level-Info" parent="." unique_id=1909714594 instance=ExtResource("4_oxtd6")]
 level_path = "res://Scenes/Levels/sample_level.tscn"
