@@ -29,8 +29,6 @@ func _on_mouse_hovered(hovered: bool) -> void:
 		scale_amount if hovered else Vector2.ONE, anim_duration)
 	tween.tween_property(button, "rotation_degrees", 
 		rotation_amount * [-1, 1].pick_random() if hovered else 0.0, anim_duration)
-	
-	
 
 func reset_tween() -> void:
 	if tween: tween.kill()

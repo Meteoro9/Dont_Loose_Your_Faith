@@ -4,7 +4,7 @@ class_name CandlePlayer
 const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
 
-@export var fire_animation : Area2D
+@export var fire_behaviour : FireBehaviour
 var won := false
 
 #region Movement
@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	if not won:
 		# Handle jump.
-		if Input.is_action_just_pressed("arriba") and is_on_floor() and not _in_slime:
+		if Input.is_action_pressed("arriba") and is_on_floor() and not _in_slime:
 			velocity.y = JUMP_VELOCITY
 		
 		# Get the input direction and handle the movement/deceleration.
@@ -26,9 +26,9 @@ func _physics_process(delta: float) -> void:
 			var target_x = direction * SPEED
 			
 			# Ejecutamos mecánica principal
-			fire_animation.take_damage(1.5)
-			if fire_animation.current_flame <= 0:
-				fire_animation.kill()
+			fire_behaviour.take_damage(1.5)
+			if fire_behaviour.current_flame <= 0.0:
+				fire_behaviour.kill()
 			#endregion
 			#region Aply States
 			# Esta sentencia es una locura!!!

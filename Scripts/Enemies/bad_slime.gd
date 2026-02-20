@@ -65,6 +65,7 @@ func _enemy_motion(_delta):
 func _on_attack_started():
 	if $AnimatedSprite2D.animation == "attack" and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+#endregion
 
 #region ÁREAS
 # Área dañado
@@ -94,3 +95,4 @@ func _on_hit_box_body_exited(body: Node2D) -> void:
 func _on_area_follow_body_exited(body: Node2D) -> void:
 	if body is CandlePlayer and _current_state == State.FOLLOWING:
 		_current_state = State.MOVING # Para evitar comportamientos de seguimiento extraños
+#endregion

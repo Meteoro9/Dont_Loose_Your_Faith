@@ -1,7 +1,7 @@
 extends Area2D
 class_name WaterArea
 
-var damage := 50.0
+var damage : float = 50.0
 var player_inside : CandlePlayer = null
 
 func _ready() -> void:
