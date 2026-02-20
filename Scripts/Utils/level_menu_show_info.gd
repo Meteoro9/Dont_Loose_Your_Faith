@@ -46,6 +46,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	hour_record_label.text = hour_text
 	stars_record_label.text = stars_text
 
+#region Animations
 func show_level_info():
 	animation.play("appear")
 	await animation.animation_finished
@@ -57,19 +58,18 @@ func hide_level_info():
 	visible = false
 	var animation_menu = get_parent().get_node("AnimationPlayer")
 	animation_menu.play("show_menu")
+#endregion
 
 #region Buttons!!!
 func _on_button_next_pressed():
 	if (current_level_index + 1) < level_info_array_ordered.size():
 		current_level_index += 1
 		show_info(level_info_array_ordered[current_level_index])
-		#h_box_container.global_position.y = _initial_y
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0:
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
-		#h_box_container.global_position.y = _initial_y
 
 func _on_button_play_pressed():
 	LoadBar.fade_to_scene(level_info_array_ordered[current_level_index].level_path)

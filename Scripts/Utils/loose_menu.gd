@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func on_retry_pressed():
-	LoadBar.fade_to_scene("res://Scenes/Levels/sample_level.tscn")
+	LoadBar.fade_to_scene(GameManager.level_paths[GameManager.current_level_index])
 	queue_free()
 
 func on_go_menu_pressed():

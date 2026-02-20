@@ -28,6 +28,8 @@ buses/default_bus_layout="uid://b0pi7vexomshk"
 GameData="*res://Scripts/Utils/game_data.gd"
 GlobalMusicManager="*uid://blyuq2har1ns"
 LoadBar="*uid://ci4rrirmkqk6a"
+UtilsTools="*uid://8inuqf7fkhak"
+GameManager="*uid://rcvf87m2hnc7"
 
 [display]
 

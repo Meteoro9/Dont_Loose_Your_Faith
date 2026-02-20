@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="1_gxp0d"]
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
-[ext_resource type="Script" uid="uid://b3oa7t8vwp7m" path="res://Scripts/Utils/level1_manager.gd" id="1_u3gei"]
+[ext_resource type="Script" uid="uid://b3oa7t8vwp7m" path="res://Scripts/Utils/level_manager.gd" id="1_u3gei"]
 [ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="2_rbjd4"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="4_7ugqr"]
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="4_piwxh"]
@@ -5093,7 +5093,7 @@ sources/0 = SubResource("TileSetAtlasSource_rbjd4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g630t"]
 size = Vector2(56, 2394)
 
-[node name="Sample_Level" type="Node2D" unique_id=1150439360]
+[node name="Sample_Level" type="Node" unique_id=46524390]
 script = ExtResource("1_u3gei")
 
 [node name="WindAreas" type="Node" parent="." unique_id=1489094702]
@@ -5175,6 +5175,7 @@ position = Vector2(305, -1205)
 position = Vector2(272, 130)
 
 [node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("8_42xj8")]
+scale = Vector2(0.99999994, 0.99999994)
 player = NodePath("../Candle-Player")
 
 [node name="ShowTimer" parent="." unique_id=1522023902 instance=ExtResource("8_m3nkb")]
