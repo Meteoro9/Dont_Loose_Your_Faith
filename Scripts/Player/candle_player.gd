@@ -6,6 +6,7 @@ enum State { NORMAL, SLIMED, PUSHED }
 var _current_state : State = State.NORMAL
 const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
+const _WIND_FRICTION : float = 0.30
 
 @export var fire_behaviour : FireBehaviour
 var won := false
@@ -37,11 +38,13 @@ func _physics_process(delta: float) -> void:
 			#endregion
 			#region Aply States
 			# Esta sentencia es una locura!!!
-			var friction = _slime_friction if _in_slime else _normal_friction
+			var friction = _slime_friction if _in_slime else \
+				(_WIND_FRICTION if in_wind else _normal_friction)
 			# Aplicamos fricción a la velocidad
 			velocity.x = lerp(velocity.x, target_x, friction)
 		else:
-			var stop_friction = _slime_friction if _in_slime else 1.0
+			var stop_friction = _slime_friction if _in_slime else \
+				(_WIND_FRICTION if in_wind else 1.0)
 			velocity.x = lerp(velocity.x, 0.0, stop_friction)
 			#velocity.x = move_toward(velocity.x, 0, SPEED) # Código original
 			#endregion

@@ -679,6 +679,7 @@ time_star_2 = 35.0
 
 [node name="Level-2-Info" parent="." unique_id=819396862 instance=ExtResource("4_oxtd6")]
 level_id = 2
+level_path = "res://Scenes/Levels/Final Levels/level_2.tscn"
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
