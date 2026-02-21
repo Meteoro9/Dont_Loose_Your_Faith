@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cg68pa7w4vphn"]
+
+[ext_resource type="Script" uid="uid://b3oa7t8vwp7m" path="res://Scripts/Utils/level_manager.gd" id="1_xw3oy"]
+[ext_resource type="PackedScene" uid="uid://b4okyrgl1n2qk" path="res://Scenes/Levels/tile_map_final.tscn" id="2_p07l4"]
+[ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="3_76fgj"]
+[ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="4_kyh3l"]
+[ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="5_ph4wd"]
+[ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="6_haist"]
+[ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="7_ttx10"]
+
+[node name="Level 2" type="Node" unique_id=474322292]
+script = ExtResource("1_xw3oy")
+level_id = 2
+
+[node name="TileMapLayer" parent="." unique_id=1476902100 instance=ExtResource("2_p07l4")]
+
+[node name="ShowTimer" parent="." unique_id=2067365408 instance=ExtResource("3_76fgj")]
+
+[node name="Candle-Player" parent="." unique_id=31092358 instance=ExtResource("4_kyh3l")]
+visible = false
+
+[node name="WinArea" parent="." unique_id=1272530565 node_paths=PackedStringArray("show_timer") instance=ExtResource("5_ph4wd")]
+is_win = true
+show_timer = NodePath("../ShowTimer")
+level_id = 2
+
+[node name="LooseArea" parent="." unique_id=1996075447 node_paths=PackedStringArray("show_timer") instance=ExtResource("5_ph4wd")]
+show_timer = NodePath("../ShowTimer")
+level_id = 2
+
+[node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("6_haist")]
+player = NodePath("../Candle-Player")
+
+[node name="Parallax2" parent="." unique_id=2015146119 instance=ExtResource("7_ttx10")]
