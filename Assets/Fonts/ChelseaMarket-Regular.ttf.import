@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ctccrv58u3mka"
+uid="uid://ckf8mo42wqebx"
 path="res://.godot/imported/ChelseaMarket-Regular.ttf-1f7f57ad6d8d85d1f2332308c89298a9.fontdata"
 
 [deps]
@@ -16,7 +16,7 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=true
+multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
@@ -27,15 +27,10 @@ subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("res://Assets/Fonts/NotoSans_Condensed-ExtraBoldItalic.ttf"), Resource("uid://ds2em608c8u7d", "res://Assets/Fonts/NotoSansTC-SemiBold.ttf"), Resource("res://Assets/Fonts/NotoSansDevanagari-VariableFont_wdth,wght.ttf")]
+fallbacks=[]
 Compress=null
-compress=false
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+compress=true
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

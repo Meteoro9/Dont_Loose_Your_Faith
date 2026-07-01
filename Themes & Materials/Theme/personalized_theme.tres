@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://dc1cc6r6c43sd"]
 
-[ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="1_a8t4o"]
+[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="1_a8t4o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vk5m"]
 bg_color = Color(0.18000486, 0.1800049, 0.18000478, 1)

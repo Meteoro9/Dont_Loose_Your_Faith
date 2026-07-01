@@ -55,7 +55,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	hour_record_label.text = hour_text
 	stars_record_label.text = stars_text
 	# Revisamos si el jugador puede jugar el nivel
-	_update_play_availability(summary)
+	#_update_play_availability(summary) # Descomentar si se quiere imponer requisito
 	placing_no_records_label()
 
 
